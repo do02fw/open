@@ -37,5 +37,6 @@ ipv6的dns:
 修改/etc/openvpn/server/server.conf的IP地址为服务器IPV6地址以及客户端配置文件的地址为IPV6地址
 服务器端配置文件中，添加以下行：
 local <IPv4地址>
+
 local <IPv6地址>
 
