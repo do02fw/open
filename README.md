@@ -25,3 +25,13 @@ service openvpn restart
 ipv6的dns:
 
 2606:4700:4700::1001
+
+
+# 开启IPV6转发
+
+修改/etc/sysctl.conf 取消ipv6注释
+
+
+# 使用ipv6连接
+
+修改/etc/openvpn/server/server.conf的IP地址为服务器IPV6地址
