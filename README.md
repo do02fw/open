@@ -11,6 +11,6 @@ echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http:
 
 mtu-disc yes
 
-duplicate
+duplicate-cn
 
 2606:4700:4700::1001
