@@ -32,6 +32,6 @@ ipv6的dns:
 修改/etc/sysctl.conf 取消ipv6注释
 
 
-# 使用ipv6连接
+# 使用IPV6连接
 
 修改/etc/openvpn/server/server.conf的IP地址为服务器IPV6地址以及客户端配置文件的地址为IPV6地址
