@@ -15,6 +15,8 @@ echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http:
 wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh
              \# 选择udp dns 1.1.1.1那个 端口随便输别默认
 
+安装完成后执行
+
 sed -i 's/1.1.1.1/1.0.0.1/g' /etc/openvpn/server/server.conf
 
 sed -i 's/1.0.0.1/2606:4700:4700::1001/g' /etc/openvpn/server/server.conf
