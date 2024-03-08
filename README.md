@@ -22,7 +22,7 @@ echo 'duplicate-cn' >> /etc/openvpn/server/server.conf
 
 sudo service openvpn restart
 
-ipv6的dns:
+IPV6的DNS
 
 2606:4700:4700::1001
 
