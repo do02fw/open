@@ -45,8 +45,8 @@ local <IPv6地址>
 
 # 删掉自带的防火墙
 
-可以省去很多步骤，
-命令
+可以省去很多事
+
 apt remove iptables
 
 apt autoremove
