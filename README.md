@@ -36,7 +36,7 @@ local <IPv4地址> #如果有私有IPV4地址需要再添加一行私有的ipv4�
 
 local <IPv6地址>
 
-proto改为udp6
+客户端和服务器的配置文件离得proto udp需要改为proto udp6
 
 # 删掉自带的防火墙
 
