@@ -34,7 +34,7 @@ IPV6的DNS
 
 # 使用IPV6连接
 
-修改/etc/openvpn/server/server.conf
+修改配置文件vim /etc/openvpn/server/server.conf
 
 local <IPv4地址>
 
