@@ -20,7 +20,7 @@ echo 'duplicate-cn' >> /etc/openvpn/server/server.conf
 
 # 重启openvpn服务
 
-service openvpn restart
+sudo service openvpn restart
 
 ipv6的dns:
 
