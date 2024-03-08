@@ -27,18 +27,16 @@ IPV6的DNS
 2606:4700:4700::1001
 
 
-# 开启IPV6转发
-
-修改/etc/sysctl.conf 取消ipv6注释
-
 
 # 使用IPV6连接
 
 修改配置文件vim /etc/openvpn/server/server.conf
 
-local <IPv4地址>
+local <IPv4地址> #如果有私有IPV4地址需要再添加一行私有的ipv4地址，比如local 172.26.6.13
 
 local <IPv6地址>
+
+proto改为udp6
 
 # 删掉自带的防火墙
 
