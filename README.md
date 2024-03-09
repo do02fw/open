@@ -29,6 +29,7 @@ echo 'mtu-disc yes' >> /etc/openvpn/server/server.conf
 
 echo 'duplicate-cn' >> /etc/openvpn/server/server.conf
 
+echo '--data-ciphers CHACHA20-POLY1305' >> /etc/openvpn/server/server.conf
 
 # 重启openvpn服务
 
