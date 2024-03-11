@@ -29,7 +29,7 @@ echo 'mtu-disc yes' >> /etc/openvpn/server/server.conf
 
 echo 'duplicate-cn' >> /etc/openvpn/server/server.conf
 
-echo '--data-ciphers CHACHA20-POLY1305' >> /etc/openvpn/server/server.conf
+echo '--data-ciphers AES-256-GCM' >> /etc/openvpn/server/server.conf
 
 # 重启openvpn服务
 
@@ -53,7 +53,7 @@ local <IPv6地址>
 
 # 删掉自带的防火墙
 
-可以省去很多事
+一定要安装完成后再执行
 
 apt remove iptables
 
