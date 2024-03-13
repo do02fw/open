@@ -1,6 +1,7 @@
 # Gemini容器启动命令
 
-<code>docker run -d \
+<code>
+docker run -d \
   --name chatgemini \
   --restart always \
   --publish 80:8080 \
