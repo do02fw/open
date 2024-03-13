@@ -33,11 +33,6 @@ echo 'duplicate-cn' >> /etc/openvpn/server/server.conf
 
 sudo service openvpn restart
 
-IPV6的DNS
-
-2606:4700:4700::1001
-
-
 
 # 使用IPV6连接
 
