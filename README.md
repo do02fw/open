@@ -1,3 +1,5 @@
+# 官方文档
+
 https://openvpn.net/community-resources/reference-manual-for-openvpn-2-6/#encryption-options
 
 # 准备环境
@@ -38,8 +40,13 @@ sudo service openvpn restart
 
 修改配置文件vim /etc/openvpn/server/server.conf
 
-local <IPv4地址> #如果有私有IPV4地址需要再添加一行私有的ipv4地址，比如local 172.26.6.13
-
+添加
 local <IPv6地址>
 
 客户端和服务器的配置文件中的proto udp需要改为proto udp6
+
+# 官方客户端下载
+
+https://openvpn.net/client/client-connect-vpn-for-windows/
+
+https://www.apkmirror.com/apk/openvpn/openvpn-connect/
