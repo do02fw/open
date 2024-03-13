@@ -29,8 +29,6 @@ echo 'mtu-disc yes' >> /etc/openvpn/server/server.conf
 
 echo 'duplicate-cn' >> /etc/openvpn/server/server.conf
 
-echo '--data-ciphers AES-256-GCM' >> /etc/openvpn/server/server.conf
-
 # 重启openvpn服务
 
 sudo service openvpn restart
@@ -50,11 +48,3 @@ local <IPv4地址> #如果有私有IPV4地址需要再添加一行私有的ipv4�
 local <IPv6地址>
 
 客户端和服务器的配置文件中的proto udp需要改为proto udp6
-
-# 删掉自带的防火墙
-
-一定要安装完成后再执行
-
-apt remove iptables
-
-apt autoremove
