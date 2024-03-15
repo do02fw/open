@@ -1,5 +1,10 @@
 # 搭建教程和环境变量
 
+安全等级修改
+
+/app/client/platforms/google.ts
+
+里面的BLOCK_ONLY_HIGH改成BLOCK_NONE
 
 搭建和更新教程
 
