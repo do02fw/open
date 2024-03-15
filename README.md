@@ -1,8 +1,20 @@
-# 环境变量启动命令
+# 搭建教程和环境变量
+
+
+搭建和更新教程
+
+https://github.com/do02fw/ChatGPT-Next-Web/blob/main/docs/vercel-cn.md#%E5%A6%82%E4%BD%95%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AE
+
+环境变量 
+
+https://github.com/do02fw/ChatGPT-Next-Web/blob/main/README_CN.md
 
 ```bash
 
-test
+CUSTOM_MODELS -all,+gemini-pro,+gemini-pro-vison
+DISABLE_FAST_LINK 1
+HIDE_USER_API_KEY 1
+GOOGLE_API_KEY 密钥
 
 ```
 
