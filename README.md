@@ -1,14 +1,9 @@
-# Gemini启动命令
+# 环境变量启动命令
 
 ```bash
-$ docker run -d \
-    --name chatgemini \
-    --restart always \
-    --publish 80:8080 \
-    --env REACT_APP_GEMINI_API_KEY="KEY" \
-    --env REACT_APP_GEMINI_API_URL="__use_nginx__" \
-    --env GENERATIVE_AI_API_VERSION=v1 \
-    ghcr.io/bclswl0827/chatgemini
+
+test
+
 ```
 
 # 官方文档
