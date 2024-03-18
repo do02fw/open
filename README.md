@@ -1,3 +1,11 @@
+# ocserv配置
+
+sudo sed -i '/net.core.default_qdisc=fq\|net.ipv4.tcp_congestion_control=bbr/d' /etc/sysctl.conf
+
+
+
+
+
 # 搭建教程和环境变量
 
 安全等级修改
