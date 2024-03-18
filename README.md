@@ -26,6 +26,8 @@ sudo sed -i 's/dns = 8.8.4.4/dns = 2606:4700:4700::1001/' /etc/ocserv/ocserv.con
 
 sudo sed -i 's/cisco-client-compat = true = true/cisco-client-compat = true/' /etc/ocserv/ocserv.conf
 
+sudo sed -i 's/^#net-priority = 3/net-priority = 6/' /etc/ocserv/ocserv.conf
+
 
 # 搭建教程和环境变量
 
