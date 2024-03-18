@@ -12,6 +12,7 @@ sudo sed -i 's/mobile-dpd = 300/mobile-dpd = 0/g' /etc/ocserv/ocserv.conf
 
 sudo sed -i 's/compression = true/compression = false/g' /etc/ocserv/ocserv.conf
 
+sudo sed -i 's/^no-compress-limit = 256/# no-compress-limit = 256/' /etc/ocserv/ocserv.conf
 
 
 # 搭建教程和环境变量
