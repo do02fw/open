@@ -104,7 +104,7 @@ echo 'duplicate-cn' >> /etc/openvpn/server/server.conf
 
 禁用IPV6
 
-客户端配置文件添加disable-ipv6
+
 
 # 重启openvpn服务
 
