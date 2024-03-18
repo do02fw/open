@@ -10,6 +10,8 @@ sudo sed -i 's/dpd = 60/dpd = 0/g' /etc/ocserv/ocserv.conf
 
 sudo sed -i 's/mobile-dpd = 300/mobile-dpd = 0/g' /etc/ocserv/ocserv.conf
 
+sudo sed -i 's/compression = true/compression = false/g' /etc/ocserv/ocserv.conf
+
 
 
 # 搭建教程和环境变量
