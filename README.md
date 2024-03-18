@@ -14,6 +14,9 @@ sudo sed -i 's/compression = true/compression = false/g' /etc/ocserv/ocserv.conf
 
 sudo sed -i 's/^no-compress-limit = 256/# no-compress-limit = 256/' /etc/ocserv/ocserv.conf
 
+sudo sed -i 's/tls-priorities = "NORMAL:%SERVER_PRECEDENCE:%COMPAT:-RSA:-VERS-SSL3.0:-ARCFOUR-128:-VERS-TLS1.0:-VERS-TLS1.1"/tls-priorities = "NORMAL:%SERVER_PRECEDENCE:%COMPAT:-RSA:-VERS-SSL3.0:-ARCFOUR-128:-VERS-TLS1.0:-VERS-TLS1.1:-VERS-TLS1.2"/' /etc/ocserv/ocserv.conf
+
+
 
 # 搭建教程和环境变量
 
