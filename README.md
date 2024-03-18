@@ -16,10 +16,15 @@ sudo sed -i 's/^no-compress-limit = 256/# no-compress-limit = 256/' /etc/ocserv/
 
 sudo sed -i 's/tls-priorities = "NORMAL:%SERVER_PRECEDENCE:%COMPAT:-RSA:-VERS-SSL3.0:-ARCFOUR-128:-VERS-TLS1.0:-VERS-TLS1.1"/tls-priorities = "NORMAL:%SERVER_PRECEDENCE:%COMPAT:-RSA:-VERS-SSL3.0:-ARCFOUR-128:-VERS-TLS1.0:-VERS-TLS1.1:-VERS-TLS1.2"/' /etc/ocserv/ocserv.conf
 
-sudo sed -i 's/^#ipv6-network = fda9:4efe:7e3b:03ea::/48/ipv6-network = fda9:4efe:7e3b:03ea::/48/' /etc/ocserv/ocserv.conf
+sudo sed -i 's/#ipv6-network = fda9:4efe:7e3b:03ea::\/48/ipv6-network = fda9:4efe:7e3b:03ea::\/48/' /etc/ocserv/ocserv.conf
 
-sudo sed -i 's/^#ipv6-subnet-prefix = 64/ipv6-subnet-prefix = 64/' /etc/ocserv/ocserv.conf
+sudo sed -i 's/#ipv6-subnet-prefix = 64/ipv6-subnet-prefix = 64/' /etc/ocserv/ocserv.conf
 
+sudo sed -i 's/dns = 8.8.8.8/dns = 1.0.0.1/' /etc/ocserv/ocserv.conf
+
+sudo sed -i 's/dns = 8.8.4.4/dns = 2606:4700:4700::1001/' /etc/ocserv/ocserv.conf
+
+sudo sed -i 's/cisco-client-compat = true = true/cisco-client-compat = true/' /etc/ocserv/ocserv.conf
 
 
 # 搭建教程和环境变量
