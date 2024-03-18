@@ -24,9 +24,9 @@ sudo sed -i 's/cisco-client-compat = true = true/cisco-client-compat = true/' /e
 
 sudo sed -i 's/^#net-priority = 3/net-priority = 6/' /etc/ocserv/ocserv.conf
 
-禁用UDP（可选）
+更新Ubuntu测试版（可选）
 
-sudo sed -i 's/^udp-port = 443/#udp-port = 443/' /etc/ocserv/ocserv.conf
+sudo do-release-upgrade -d
 
 开启IPV6（可选）
 
