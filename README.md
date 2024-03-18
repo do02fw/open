@@ -99,6 +99,10 @@ echo 'mtu-disc yes' >> /etc/openvpn/server/server.conf
 
 echo 'duplicate-cn' >> /etc/openvpn/server/server.conf
 
+禁用IPV6
+
+sed -i '1a push "disable-ipv6"' /etc/openvpn/server/server.conf
+
 # 重启openvpn服务
 
 sudo service openvpn restart
