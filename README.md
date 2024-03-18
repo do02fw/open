@@ -20,6 +20,8 @@ sudo sed -i 's/dns = 8.8.8.8/dns = 1.0.0.1/' /etc/ocserv/ocserv.conf
 
 sudo sed -i 's/^dns = 8.8.4.4/#dns = 8.8.4.4/' /etc/ocserv/ocserv.conf
 
+如果开启固定MTU需设置
+
 sudo sed -i 's/^#net-priority = 3/net-priority = 6/' /etc/ocserv/ocserv.conf
 
 更新Ubuntu测试版（可选）
