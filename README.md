@@ -84,6 +84,11 @@ echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http:
 
 echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/testing jammy main" > /etc/apt/sources.list.d/openvpn-aptrepo.list
 
+如果是Ubuntu测试版则
+
+echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/testing lunar main" > /etc/apt/sources.list.d/openvpn-aptrepo.list
+
+
 # 安装启动openvpn服务
 
 wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh
