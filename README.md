@@ -4,6 +4,7 @@
 
 sudo sed -i '/net.core.default_qdisc=fq\|net.ipv4.tcp_congestion_control=bbr/d' /etc/sysctl.conf
 
+sudo sed -i 's/keepalive = 3000/keepalive = 32400/g' /etc/ocserv/ocserv.conf
 
 
 
