@@ -26,11 +26,6 @@ sudo sed -i 's/#mtu = 1420/mtu = 1420/g' /etc/ocserv/ocserv.conf
 
 sudo sed -i 's/try-mtu-discovery = true/try-mtu-discovery = false/g' /etc/ocserv/ocserv.conf
 
-
-更新Ubuntu测试版（可选）
-
-sudo do-release-upgrade -d
-
 开启IPV6（可选）
 
 sudo sed -i 's/#dns = 8.8.4.4/dns = 2606:4700:4700::1001/' /etc/ocserv/ocserv.conf
