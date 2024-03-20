@@ -30,6 +30,10 @@ sudo sed -i 's/try-mtu-discovery = true/try-mtu-discovery = false/g' /etc/ocserv
 
 开启IPV6（可选）
 
+ip6tables -t nat -A POSTROUTING -j MASQUERADE
+
+ip6tables-save > /etc/iptables/rules.v6
+
 sudo sed -i 's/#dns = 8.8.4.4/dns = 2606:4700:4700::1001/' /etc/ocserv/ocserv.conf
 
 sudo sed -i 's/#ipv6-network = fda9:4efe:7e3b:03ea::\/48/ipv6-network = fda9:4efe:7e3b:03ea::\/48/' /etc/ocserv/ocserv.conf
