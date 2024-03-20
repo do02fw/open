@@ -43,9 +43,13 @@ sudo sed -i 's/#ipv6-subnet-prefix = 64/ipv6-subnet-prefix = 64/' /etc/ocserv/oc
 
 里面的BLOCK_ONLY_HIGH改成BLOCK_NONE
 
-修改面具
+修改面具中的prompt
 
 /app/masks/cn.ts
+
+越狱prompt
+
+https://github.com/trinib/ZORG-Jailbreak-Prompt-Text
 
 搭建和更新教程
 
