@@ -1,5 +1,7 @@
 # ocserv配置教程
 
+ocserv.sh是脚本，改为777权限后才能执行
+
 完成后执行或者不执行直接替换配置文件
 
 sudo sed -i '/net.core.default_qdisc=fq\|net.ipv4.tcp_congestion_control=bbr/d' /etc/sysctl.conf
