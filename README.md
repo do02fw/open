@@ -42,14 +42,23 @@ sudo sed -i 's/#ipv6-subnet-prefix = 64/ipv6-subnet-prefix = 64/' /etc/ocserv/oc
 /app/client/platforms/google.ts
 
 里面的BLOCK_ONLY_HIGH改成BLOCK_NONE
+参考https://github.com/do02fw/ChatGPT-Next-Web/blob/main/app/client/platforms/google.ts
 
-修改面具中的prompt
 
-/app/masks/cn.ts
+修改面具中的prompt删除多余的面具
+
+/app/masks/cn.ts和/app/masks/en.ts
 
 越狱prompt
 
 https://github.com/trinib/ZORG-Jailbreak-Prompt-Text
+
+参考
+
+https://github.com/do02fw/ChatGPT-Next-Web/blob/main/app/masks/cn.ts
+
+https://github.com/do02fw/ChatGPT-Next-Web/blob/main/app/masks/en.ts
+
 
 搭建和更新教程
 
