@@ -42,6 +42,7 @@ sudo sed -i 's/#ipv6-subnet-prefix = 64/ipv6-subnet-prefix = 64/' /etc/ocserv/oc
 /app/client/platforms/google.ts
 
 里面的BLOCK_ONLY_HIGH改成BLOCK_NONE
+
 参考https://github.com/do02fw/ChatGPT-Next-Web/blob/main/app/client/platforms/google.ts
 
 
