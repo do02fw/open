@@ -64,11 +64,11 @@ GOOGLE_API_KEY 密钥
 
 ```
 
-# 官方文档
+# openvpn官方文档
 
 https://openvpn.net/community-resources/reference-manual-for-openvpn-2-6/#encryption-options
 
-# 准备环境
+# openvpn准备环境
 
 mkdir -p /etc/apt/keyrings
 
