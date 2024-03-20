@@ -55,6 +55,10 @@ https://github.com/trinib/ZORG-Jailbreak-Prompt-Text
 
 https://github.com/do02fw/ChatGPT-Next-Web/blob/main/docs/vercel-cn.md#%E5%A6%82%E4%BD%95%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AE
 
+Vercel
+
+https://vercel.com/
+
 环境变量 
 
 https://github.com/do02fw/ChatGPT-Next-Web/blob/main/README_CN.md
