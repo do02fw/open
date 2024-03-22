@@ -46,6 +46,8 @@ sudo sed -i 's/Prompt=lts/Prompt=normal/g' /etc/update-manager/release-upgrades
 
 sudo do-release-upgrade
 
+更新后iptables和ocserv.conf需要重新设置
+
 
 # Gemini搭建教程和环境变量
 
