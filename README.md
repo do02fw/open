@@ -127,7 +127,7 @@ echo 'mtu-disc yes' >> /etc/openvpn/server/server.conf
 echo 'duplicate-cn' >> /etc/openvpn/server/server.conf
 
 # 禁用客户端的IPv6流量
-push "redirect-gateway ipv6 def1 bypass-dhcp"
+echo 'push "redirect-gateway ipv6 def1 bypass-dhcp"' >> /etc/openvpn/server/server.conf
 
 # 重启openvpn服务
 
