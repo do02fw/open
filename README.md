@@ -40,6 +40,12 @@ sudo sed -i 's/#ipv6-network = fda9:4efe:7e3b:03ea::\/48/ipv6-network = fda9:4ef
 
 sudo sed -i 's/#ipv6-subnet-prefix = 64/ipv6-subnet-prefix = 64/' /etc/ocserv/ocserv.conf
 
+Ubuntu更新到正式版命令
+
+sudo sed -i 's/Prompt=lts/Prompt=normal/g' /etc/update-manager/release-upgrades
+
+sudo do-release-upgrade
+
 
 # Gemini搭建教程和环境变量
 
