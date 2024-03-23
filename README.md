@@ -42,6 +42,8 @@ sudo sed -i 's/#ipv6-subnet-prefix = 64/ipv6-subnet-prefix = 64/' /etc/ocserv/oc
 
 Ubuntu更新到正式版命令
 
+sudo apt install ubuntu-release-upgrader-core
+
 sudo sed -i 's/Prompt=lts/Prompt=normal/g' /etc/update-manager/release-upgrades
 
 sudo do-release-upgrade
