@@ -6,39 +6,12 @@ ocserv.sh是脚本，改为777权限后才能执行
 
 sudo sed -i '/net.core.default_qdisc=fq\|net.ipv4.tcp_congestion_control=bbr/d' /etc/sysctl.conf
 
-sudo sed -i 's/keepalive = 3000/keepalive = 32400/g' /etc/ocserv/ocserv.conf
-
-sudo sed -i 's/dpd = 60/dpd = 0/g' /etc/ocserv/ocserv.conf
-
-sudo sed -i 's/mobile-dpd = 300/mobile-dpd = 0/g' /etc/ocserv/ocserv.conf
-
-sudo sed -i 's/compression = true/compression = false/g' /etc/ocserv/ocserv.conf
-
-sudo sed -i 's/^no-compress-limit = 256/# no-compress-limit = 256/' /etc/ocserv/ocserv.conf
-
-sudo sed -i 's/tls-priorities = "NORMAL:%SERVER_PRECEDENCE:%COMPAT:-RSA:-VERS-SSL3.0:-ARCFOUR-128:-VERS-TLS1.0:-VERS-TLS1.1"/tls-priorities = "NORMAL:%SERVER_PRECEDENCE:%COMPAT:-RSA:-VERS-SSL3.0:-ARCFOUR-128:-VERS-TLS1.0:-VERS-TLS1.1:-VERS-TLS1.2"/' /etc/ocserv/ocserv.conf
-
-sudo sed -i 's/dns = 8.8.8.8/dns = 1.0.0.1/' /etc/ocserv/ocserv.conf
-
-sudo sed -i 's/^dns = 8.8.4.4/#dns = 8.8.4.4/' /etc/ocserv/ocserv.conf
-
-sudo sed -i 's/^#net-priority = 3/net-priority = 6/' /etc/ocserv/ocserv.conf
-
-sudo sed -i 's/#mtu = 1420/mtu = 1420/g' /etc/ocserv/ocserv.conf
-
-sudo sed -i 's/try-mtu-discovery = true/try-mtu-discovery = false/g' /etc/ocserv/ocserv.conf
-
 开启IPV6（可选）
 
 ip6tables -t nat -A POSTROUTING -j MASQUERADE
 
 ip6tables-save > /etc/iptables/rules.v6
 
-sudo sed -i 's/#dns = 8.8.4.4/dns = 2606:4700:4700::1001/' /etc/ocserv/ocserv.conf
-
-sudo sed -i 's/#ipv6-network = fda9:4efe:7e3b:03ea::\/48/ipv6-network = fda9:4efe:7e3b:03ea::\/48/' /etc/ocserv/ocserv.conf
-
-sudo sed -i 's/#ipv6-subnet-prefix = 64/ipv6-subnet-prefix = 64/' /etc/ocserv/ocserv.conf
 
 Ubuntu更新到正式版命令
 
