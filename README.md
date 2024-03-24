@@ -85,11 +85,11 @@ curl -fsSL https://swupdate.openvpn.net/repos/repo-public.gpg | gpg --dearmor > 
 
 echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/testing bookworm main" > /etc/apt/sources.list.d/openvpn-aptrepo.list
 
-如果是Ubuntu则
+如果是Ubuntu22.04则
 
 echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/testing jammy main" > /etc/apt/sources.list.d/openvpn-aptrepo.list
 
-如果是Ubuntu测试版则
+如果是Ubuntu24.10则
 
 echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/testing lunar main" > /etc/apt/sources.list.d/openvpn-aptrepo.list
 
@@ -104,8 +104,6 @@ wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh
 sed -i 's/1.0.0.1/2606:4700:4700::1001/g' /etc/openvpn/server/server.conf
 
 sed -i 's/1.1.1.1/1.0.0.1/g' /etc/openvpn/server/server.conf
-
-echo 'mtu-disc yes' >> /etc/openvpn/server/server.conf
 
 echo 'duplicate-cn' >> /etc/openvpn/server/server.conf
 
