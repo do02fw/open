@@ -8,10 +8,15 @@ sudo sed -i '/net.core.default_qdisc=fq\|net.ipv4.tcp_congestion_control=bbr/d' 
 
 开启IPV6（可选）
 
-ip6tables -t nat -A POSTROUTING -j MASQUERADE
+sudo ip6tables -t nat -A POSTROUTING -j MASQUERADE
 
-ip6tables-save > /etc/iptables/rules.v6
+sudo ip6tables-save > /etc/iptables/rules.v6
 
+没网的话执行一下开启IPV4
+
+sudo iptables -t nat -A POSTROUTING -j MASQUERADE
+
+sudo iptables-save > /etc/iptables/rules.v4
 
 Ubuntu更新到正式版命令
 
