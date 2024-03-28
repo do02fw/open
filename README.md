@@ -109,6 +109,8 @@ echo 'mtu-disc maybe' >> /etc/openvpn/server/server.conf
 
 echo 'duplicate-cn' >> /etc/openvpn/server/server.conf
 
+echo '--data-ciphers CHACHA20-POLY1305' >> /etc/openvpn/server/server.conf
+
 # 禁用客户端的IPv6流量
 echo 'push "redirect-gateway ipv6 def1 bypass-dhcp"' >> /etc/openvpn/server/server.conf
 
