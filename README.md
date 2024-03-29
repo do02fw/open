@@ -1,34 +1,3 @@
-# ocserv配置教程
-
-ocserv.sh是脚本，改为777权限后才能执行
-
-完成后执行或者直接替换配置文件ocserv.conf
-
-sudo sed -i '/net.core.default_qdisc=fq\|net.ipv4.tcp_congestion_control=bbr/d' /etc/sysctl.conf
-
-开启IPV6（可选）
-
-sudo ip6tables -t nat -A POSTROUTING -j MASQUERADE
-
-sudo ip6tables-save > /etc/iptables/rules.v6
-
-没网的话执行一下开启IPV4
-
-sudo iptables -t nat -A POSTROUTING -j MASQUERADE
-
-sudo iptables-save > /etc/iptables/rules.v4
-
-Ubuntu更新到正式版命令
-
-sudo apt install ubuntu-release-upgrader-core
-
-sudo sed -i 's/Prompt=lts/Prompt=normal/g' /etc/update-manager/release-upgrades
-
-sudo do-release-upgrade
-
-更新后iptables和ocserv.conf需要重新设置
-
-
 # Gemini搭建教程和环境变量
 
 安全等级修改
@@ -88,6 +57,8 @@ apt-get install gpg
 
 curl -fsSL https://swupdate.openvpn.net/repos/repo-public.gpg | gpg --dearmor > /etc/apt/keyrings/openvpn-repo-public.gpg
 
+如果是Debian12.5则
+
 echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/testing bookworm main" > /etc/apt/sources.list.d/openvpn-aptrepo.list
 
 如果是Ubuntu22.04则
@@ -119,7 +90,7 @@ echo '--data-ciphers AES-256-GCM' >> /etc/openvpn/server/server.conf
 # 禁用客户端的IPv6流量
 echo 'push "redirect-gateway ipv6 def1 bypass-dhcp"' >> /etc/openvpn/server/server.conf
 
-# 重启openvpn服务
+# 重启openvpn服务，最好重启服务器
 
 sudo service openvpn restart
 
