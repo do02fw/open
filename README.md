@@ -85,10 +85,6 @@ echo 'mtu-disc maybe' >> /etc/openvpn/server/server.conf
 
 echo '--data-ciphers AES-256-GCM' >> /etc/openvpn/server/server.conf
 
-单个证书多客户的同时连接（不建议开启，速度会变慢）
-
-echo 'duplicate-cn' >> /etc/openvpn/server/server.conf
-
 
 # 禁用客户端的IPv6流量
 echo 'push "redirect-gateway ipv6 def1 bypass-dhcp"' >> /etc/openvpn/server/server.conf
