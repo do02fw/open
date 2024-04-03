@@ -20,6 +20,11 @@ sudo iptables-save > /etc/iptables/rules.v4
 
 更新后iptables和ocserv.conf需要重新设置
 
+客户端下载
+
+https://gitlab.com/openconnect/openconnect-gui/-/releases
+
+apkmirror
 
 # Gemini搭建教程和环境变量
 
