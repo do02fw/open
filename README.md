@@ -1,3 +1,26 @@
+# ocserv配置教程
+
+ocserv.sh是脚本，改为777权限后才能执行
+
+完成后执行或者直接替换配置文件ocserv.conf
+
+sudo sed -i '/net.core.default_qdisc=fq\|net.ipv4.tcp_congestion_control=bbr/d' /etc/sysctl.conf
+
+开启IPV6（可选）
+
+sudo ip6tables -t nat -A POSTROUTING -j MASQUERADE
+
+sudo ip6tables-save > /etc/iptables/rules.v6
+
+没网的话执行一下开启IPV4
+
+sudo iptables -t nat -A POSTROUTING -j MASQUERADE
+
+sudo iptables-save > /etc/iptables/rules.v4
+
+更新后iptables和ocserv.conf需要重新设置
+
+
 # Gemini搭建教程和环境变量
 
 安全等级修改
