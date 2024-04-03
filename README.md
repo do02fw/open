@@ -12,7 +12,9 @@ sudo ip6tables -t nat -A POSTROUTING -j MASQUERADE
 
 sudo ip6tables-save > /etc/iptables/rules.v6
 
-没网的话执行一下开启IPV4
+修改/etc/sysctl.conf开启ipv6转发
+
+更新系统后没网的话执行一下
 
 sudo iptables -t nat -A POSTROUTING -j MASQUERADE
 
@@ -24,7 +26,7 @@ sudo iptables-save > /etc/iptables/rules.v4
 
 https://gitlab.com/openconnect/openconnect-gui/-/releases
 
-apkmirror
+https://www.apkmirror.com/apk/cisco-systems-inc/anyconnect
 
 # Gemini搭建教程和环境变量
 
