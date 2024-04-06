@@ -14,6 +14,15 @@ sudo ip6tables-save > /etc/iptables/rules.v6
 
 修改/etc/sysctl.conf开启ipv6转发
 
+升级Ubuntu系统
+
+apt install ubuntu-release-upgrader-core
+
+vim /etc/update-manager/release-upgrades
+改为normal
+
+sudo do-release-upgrade
+
 更新系统后没网的话执行一下
 
 sudo iptables -t nat -A POSTROUTING -j MASQUERADE
