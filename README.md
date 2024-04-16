@@ -14,13 +14,6 @@ sudo ip6tables-save > /etc/iptables/rules.v6
 
 修改/etc/sysctl.conf开启ipv6转发
 
-升级Ubuntu系统
-
-apt install ubuntu-release-upgrader-core
-
-vim /etc/update-manager/release-upgrades
-改为normal
-
 sudo do-release-upgrade
 
 更新系统后没网的话执行一下
@@ -48,7 +41,6 @@ www.apkmirror.com/apk/cisco-systems-inc/anyconnect
 里面的BLOCK_ONLY_HIGH改成BLOCK_NONE
 
 参考https://github.com/do02fw/ChatGPT-Next-Web/blob/main/app/client/platforms/google.ts
-
 
 修改面具中的prompt删除多余的面具
 
@@ -106,10 +98,6 @@ echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http:
 
 echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/testing jammy main" > /etc/apt/sources.list.d/openvpn-aptrepo.list
 
-如果是Ubuntu23.10则
-
-echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/testing lunar main" > /etc/apt/sources.list.d/openvpn-aptrepo.list
-
 
 # 安装启动openvpn服务
 
@@ -123,11 +111,10 @@ sed -i 's/1.0.0.1/2606:4700:4700::1001/g' /etc/openvpn/server/server.conf
 
 sed -i 's/1.1.1.1/1.0.0.1/g' /etc/openvpn/server/server.conf
 
-echo 'mtu-disc yes' >> /etc/openvpn/server/server.conf
-
 echo '--data-ciphers AES-256-GCM' >> /etc/openvpn/server/server.conf
 
 # 禁用客户端的IPv6流量
+
 echo 'push "redirect-gateway ipv6 def1 bypass-dhcp"' >> /etc/openvpn/server/server.conf
 
 # 重启openvpn服务，最好重启服务器
