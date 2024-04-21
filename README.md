@@ -34,8 +34,6 @@ sudo iptables-save > /etc/iptables/rules.v4
 
 客户端下载
 
-gitlab.com/openconnect/openconnect-gui/-/releases
-
 www.catpaws2011.com/docs/?p=420
 
 www.apkmirror.com/apk/cisco-systems-inc/anyconnect
