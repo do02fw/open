@@ -23,6 +23,10 @@ sudo sed -i 's/Prompt=lts/Prompt=normal/g' /etc/update-manager/release-upgrades
 
 sudo do-release-upgrade
 
+更新到开发版
+
+sudo do-release-upgrade -d
+
 
 更新系统后没网的话执行一下
 
