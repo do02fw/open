@@ -15,15 +15,15 @@ sudo ip6tables-save > /etc/iptables/rules.v6
 修改/etc/sysctl.conf开启ipv6转发
 
 
-Ubuntu更新到正式版命令
+Ubuntu更新到开发版命令
 
 sudo apt install ubuntu-release-upgrader-core
 
 sudo sed -i 's/Prompt=lts/Prompt=normal/g' /etc/update-manager/release-upgrades
 
-sudo do-release-upgrade
+apt update
 
-更新到开发版
+sudo do-release-upgrade
 
 sudo do-release-upgrade -d
 
