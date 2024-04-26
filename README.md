@@ -42,6 +42,14 @@ www.catpaws2011.com/docs/?p=420 或者 gitlab.com/openconnect/openconnect-gui/-/
 
 www.apkmirror.com/apk/cisco-systems-inc/anyconnect
 
+debian12更新到测试版
+
+sed -i 's/bookworm/testing/g' /etc/apt/sources.list
+
+apt update
+
+apt upgrade
+
 # Gemini搭建教程和环境变量
 
 安全等级修改
