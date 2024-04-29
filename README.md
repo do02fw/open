@@ -42,13 +42,6 @@ www.catpaws2011.com/docs/?p=420 或者 gitlab.com/openconnect/openconnect-gui/-/
 
 www.apkmirror.com/apk/cisco-systems-inc/anyconnect
 
-debian12更新到测试版
-
-sed -i 's/bookworm/testing/g' /etc/apt/sources.list
-
-apt update
-
-apt upgrade
 
 # Gemini搭建教程和环境变量
 
@@ -107,10 +100,6 @@ mkdir -p /etc/apt/keyrings
 apt-get install gpg
 
 curl -fsSL https://swupdate.openvpn.net/repos/repo-public.gpg | gpg --dearmor > /etc/apt/keyrings/openvpn-repo-public.gpg
-
-如果是Debian12.X或更高
-
-echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/testing bookworm main" > /etc/apt/sources.list.d/openvpn-aptrepo.list
 
 如果是Ubuntu23.X或更高
 
