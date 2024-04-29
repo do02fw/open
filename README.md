@@ -121,6 +121,10 @@ echo '--data-ciphers AES-256-GCM' >> /etc/openvpn/server/server.conf
 
 echo 'duplicate-cn' >> /etc/openvpn/server/server.conf
 
+开启openvpn-dco提升性能
+
+https://openvpn.net/vpn-server-resources/openvpn-dco-access-server/
+
 # 禁用客户端的IPv6流量
 
 echo 'push "redirect-gateway ipv6 def1 bypass-dhcp"' >> /etc/openvpn/server/server.conf
