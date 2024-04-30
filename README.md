@@ -4,6 +4,10 @@
 
 lsb_release -a
 
+Debian12修改源
+
+sed -i 's/bookworm/trixie/g' /etc/apt/sources.list
+
 更新系统
 
 sudo apt update && sudo apt full-upgrade -y
