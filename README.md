@@ -1,19 +1,5 @@
 # ocserv配置教程
 
-ocserv.sh是脚本，改为777权限后才能执行
-
-完成后执行或者直接替换配置文件ocserv.conf
-
-sudo sed -i '/net.core.default_qdisc=fq\|net.ipv4.tcp_congestion_control=bbr/d' /etc/sysctl.conf
-
-开启IPV6（可选）
-
-sudo ip6tables -t nat -A POSTROUTING -j MASQUERADE
-
-sudo ip6tables-save > /etc/iptables/rules.v6
-
-修改/etc/sysctl.conf开启ipv6转发
-
 
 Ubuntu更新到开发版命令
 
@@ -27,6 +13,20 @@ sudo do-release-upgrade
 
 sudo do-release-upgrade -d
 
+
+ocserv.sh是脚本，改为777权限后才能执行
+
+完成后执行或者直接替换配置文件ocserv.conf
+
+sudo sed -i '/net.core.default_qdisc=fq\|net.ipv4.tcp_congestion_control=bbr/d' /etc/sysctl.conf
+
+开启IPV6（可选）
+
+sudo ip6tables -t nat -A POSTROUTING -j MASQUERADE
+
+sudo ip6tables-save > /etc/iptables/rules.v6
+
+修改/etc/sysctl.conf开启ipv6转发
 
 更新系统后没网的话执行一下
 
@@ -121,9 +121,6 @@ echo '--data-ciphers AES-256-GCM' >> /etc/openvpn/server/server.conf
 
 echo 'duplicate-cn' >> /etc/openvpn/server/server.conf
 
-开启openvpn-dco提升性能
-
-https://openvpn.net/vpn-server-resources/openvpn-dco-access-server/
 
 # 禁用客户端的IPv6流量
 
