@@ -4,24 +4,9 @@
 
 lsb_release -a
 
-debian更新
+更新系统
 
 sudo apt update && sudo apt full-upgrade -y
-
-
-
-Ubuntu更新到开发版命令
-
-sudo apt install ubuntu-release-upgrader-core
-
-sudo sed -i 's/Prompt=lts/Prompt=normal/g' /etc/update-manager/release-upgrades
-
-apt update
-
-sudo do-release-upgrade
-
-sudo do-release-upgrade -d
-
 
 ocserv.sh是脚本，改为777权限后才能执行
 
