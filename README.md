@@ -28,8 +28,6 @@ sudo iptables -t nat -A POSTROUTING -j MASQUERADE
 
 sudo iptables-save > /etc/iptables/rules.v4
 
-更新后iptables和ocserv.conf需要重新设置
-
 客户端下载
 
 www.catpaws2011.com/docs/?p=420 或者 gitlab.com/openconnect/openconnect-gui/-/releases
