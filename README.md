@@ -1,5 +1,9 @@
 # ocserv配置教程
 
+查看系统版本号
+
+lsb_release -a
+
 debian更新
 
 sudo apt update && sudo apt full-upgrade -y
