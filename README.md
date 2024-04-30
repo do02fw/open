@@ -1,5 +1,10 @@
 # ocserv配置教程
 
+debian更新
+
+sudo apt update && sudo apt full-upgrade -y
+
+
 
 Ubuntu更新到开发版命令
 
