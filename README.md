@@ -95,9 +95,9 @@ apt-get install gpg
 
 curl -fsSL https://swupdate.openvpn.net/repos/repo-public.gpg | gpg --dearmor > /etc/apt/keyrings/openvpn-repo-public.gpg
 
-如果是Ubuntu23.X或更高
+如果是Debian12或更高
 
-echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/testing mantic main" > /etc/apt/sources.list.d/openvpn-aptrepo.list
+echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/testing bookworm main" > /etc/apt/sources.list.d/openvpn-aptrepo.list
 
 # 安装启动openvpn服务
 
