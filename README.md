@@ -1,9 +1,5 @@
 # ocserv配置教程
 
-debian13源替换
-
-sed -i 's/bookworm/trixie/g' /etc/apt/sources.list
-
 更新系统
 
 sudo apt update && sudo apt full-upgrade -y
@@ -12,17 +8,13 @@ apt autoremove
 
 reboot
 
-查看系统版本号
-
-lsb_release -a
-
 ocserv.sh是脚本，改为777权限后才能执行
 
 完成后执行或者直接替换配置文件ocserv.conf
 
 sudo sed -i '/net.core.default_qdisc=fq\|net.ipv4.tcp_congestion_control=bbr/d' /etc/sysctl.conf
 
-开启IPV6（可选）
+开启IPV6
 
 sudo ip6tables -t nat -A POSTROUTING -j MASQUERADE
 
