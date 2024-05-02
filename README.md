@@ -1,5 +1,9 @@
 # ocserv配置教程
 
+debian13源替换
+
+sed -i 's/bookworm/trixie/g' /etc/apt/sources.list
+
 更新系统
 
 sudo apt update && sudo apt full-upgrade -y
