@@ -14,6 +14,8 @@ sudo sed -i 's/Prompt=lts/Prompt=normal/g' /etc/update-manager/release-upgrades
 
 sudo apt update && sudo do-release-upgrade
 
+sudo apt update && sudo do-release-upgrade-d
+
 sudo apt update && sudo apt full-upgrade -y
 
 apt autoremove -y && sudo reboot
