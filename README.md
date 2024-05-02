@@ -2,6 +2,8 @@
 
 更新系统
 
+sed -i 's/bookworm/trixie/g' /etc/apt/sources.list
+
 sudo apt update && sudo apt full-upgrade -y
 
 apt autoremove
