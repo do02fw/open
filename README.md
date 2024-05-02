@@ -14,9 +14,7 @@ sudo apt install ubuntu-release-upgrader-core
 
 sudo sed -i 's/Prompt=lts/Prompt=normal/g' /etc/update-manager/release-upgrades
 
-apt update
-
-sudo do-release-upgrade
+sudo apt update && sudo do-release-upgrade
 
 sudo apt update && sudo apt full-upgrade -y
 
