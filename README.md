@@ -4,9 +4,7 @@ Debian更新系统
 
 sudo apt update && sudo apt full-upgrade -y
 
-apt autoremove
-
-reboot
+apt autoremove -y && sudo reboot
 
 ubuntu更新系统
 
@@ -17,6 +15,8 @@ sudo sed -i 's/Prompt=lts/Prompt=normal/g' /etc/update-manager/release-upgrades
 sudo apt update && sudo do-release-upgrade
 
 sudo apt update && sudo apt full-upgrade -y
+
+apt autoremove -y && sudo reboot
 
 ocserv.sh是脚本，改为777权限后才能执行
 
