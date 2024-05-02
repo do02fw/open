@@ -24,15 +24,14 @@ ocserv.sh改为777权限后执行bash ocserv.sh
 
 完成后执行或者直接替换配置文件ocserv.conf
 
-sudo sed -i '/net.core.default_qdisc=fq\|net.ipv4.tcp_congestion_control=bbr/d' /etc/sysctl.conf
-
 开启IPV6
+
+修改/etc/sysctl.conf开启ipv6转发
 
 sudo ip6tables -t nat -A POSTROUTING -j MASQUERADE
 
 sudo ip6tables-save > /etc/iptables/rules.v6
 
-修改/etc/sysctl.conf开启ipv6转发
 
 更新系统后没网的话执行一下
 
