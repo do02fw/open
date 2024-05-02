@@ -1,13 +1,5 @@
 # ocserv配置教程
 
-查看系统版本号
-
-lsb_release -a
-
-Debian12修改源
-
-sed -i 's/bookworm/trixie/g' /etc/apt/sources.list
-
 更新系统
 
 sudo apt update && sudo apt full-upgrade -y
@@ -15,6 +7,10 @@ sudo apt update && sudo apt full-upgrade -y
 apt autoremove
 
 reboot
+
+查看系统版本号
+
+lsb_release -a
 
 ocserv.sh是脚本，改为777权限后才能执行
 
