@@ -12,6 +12,10 @@ sed -i 's/bookworm/trixie/g' /etc/apt/sources.list
 
 sudo apt update && sudo apt full-upgrade -y
 
+apt autoremove
+
+reboot
+
 ocserv.sh是脚本，改为777权限后才能执行
 
 完成后执行或者直接替换配置文件ocserv.conf
