@@ -1,6 +1,6 @@
 # ocserv配置教程
 
-更新系统
+Debian更新系统
 
 sed -i 's/bookworm/trixie/g' /etc/apt/sources.list
 
