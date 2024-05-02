@@ -6,7 +6,7 @@ sudo apt update && sudo apt full-upgrade -y
 
 apt autoremove -y && sudo reboot
 
-ubuntu更新系统
+Ubuntu更新系统
 
 sudo apt install ubuntu-release-upgrader-core
 
@@ -103,9 +103,9 @@ apt-get install gpg
 
 curl -fsSL https://swupdate.openvpn.net/repos/repo-public.gpg | gpg --dearmor > /etc/apt/keyrings/openvpn-repo-public.gpg
 
-如果是Debian12或更高
+Ubuntu23.10系统
 
-echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/testing bookworm main" > /etc/apt/sources.list.d/openvpn-aptrepo.list
+echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/testing mantic main" > /etc/apt/sources.list.d/openvpn-aptrepo.list
 
 # 安装启动openvpn服务
 
@@ -122,6 +122,8 @@ sed -i 's/1.1.1.1/1.0.0.1/g' /etc/openvpn/server/server.conf
 echo '--data-ciphers AES-256-GCM' >> /etc/openvpn/server/server.conf
 
 echo 'duplicate-cn' >> /etc/openvpn/server/server.conf
+
+echo 'mtu-disc yes' >> /etc/openvpn/server/server.conf
 
 
 # 禁用客户端的IPv6流量
