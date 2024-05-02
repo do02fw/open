@@ -18,7 +18,7 @@ sudo apt update && sudo apt full-upgrade -y
 
 apt autoremove -y && sudo reboot
 
-ocserv.sh是脚本，改为777权限后才能执行
+ocserv.sh改为777权限后执行bash ocserv.sh
 
 完成后执行或者直接替换配置文件ocserv.conf
 
