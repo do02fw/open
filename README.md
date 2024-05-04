@@ -94,7 +94,7 @@ GOOGLE_API_KEY 密钥
 
 # openvpn官方文档
 
-https://openvpn.net/community-resources/reference-manual-for-openvpn-2-6/#encryption-options
+https://openvpn.net/community-resources/reference-manual-for-openvpn-2-6
 
 # openvpn准备环境
 
