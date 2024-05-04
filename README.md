@@ -14,13 +14,15 @@ sudo sed -i 's/Prompt=lts/Prompt=normal/g' /etc/update-manager/release-upgrades
 
 sudo apt update && sudo do-release-upgrade
 
-sudo apt update && sudo do-release-upgrade -d
-
 sudo apt update && sudo apt full-upgrade -y
 
 apt autoremove -y && sudo reboot
 
-ocserv.sh改为777权限后执行bash ocserv.sh
+wget https://raw.githubusercontent.com/alirezamarzban/ocserv-with-user-management/main/ocserv.sh
+
+chmod +x ocserv.sh
+
+./ocserv.sh
 
 完成后执行或者直接替换配置文件ocserv.conf
 
