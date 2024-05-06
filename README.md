@@ -147,3 +147,12 @@ local <IPv6地址>
 https://openvpn.net/client/client-connect-vpn-for-windows/
 
 https://www.apkmirror.com/apk/openvpn/openvpn-connect/
+
+# 编译哔哩哔哩
+
+sudo apt install openjdk-21-jdk -y
+
+wget https://github.com/zjns/revanced-cli/releases/download/v4.6.0.1/revanced-cli.jar && wget https://github.com/BiliRoamingX/BiliRoamingX/releases/download/v1.20.3/BiliRoamingX-integrations-1.20.3.apk && wget https://github.com/BiliRoamingX/BiliRoamingX/releases/download/v1.20.3/BiliRoamingX-patches-1.20.3.jar && wget https://dl.hdslb.com/mobile/latest/android64/iBiliPlayer-bili.apk
+
+java -jar revanced-cli.jar patch --merge BiliRoamingX-integrations-1.20.3.apk --patch-bundle BiliRoamingX-patches-1.20.3.jar --signing-levels 2,3 iBiliPlayer-bili.apk
+
