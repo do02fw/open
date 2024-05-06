@@ -18,11 +18,7 @@ sudo apt update && sudo apt full-upgrade -y
 
 apt autoremove -y && sudo reboot
 
-wget https://raw.githubusercontent.com/alirezamarzban/ocserv-with-user-management/main/ocserv.sh
-
-chmod +x ocserv.sh
-
-./ocserv.sh
+chmod +x ocserv.sh && bash ocserv.sh
 
 完成后执行或者直接替换配置文件ocserv.conf
 
@@ -43,9 +39,9 @@ sudo iptables-save > /etc/iptables/rules.v4
 
 客户端下载
 
-www.catpaws2011.com/docs/?p=420 或者 gitlab.com/openconnect/openconnect-gui/-/releases
+https://www.catpaws2011.com/docs/?p=420 或者 https://gitlab.com/openconnect/openconnect-gui/-/releases
 
-www.apkmirror.com/apk/cisco-systems-inc/anyconnect
+https://www.apkmirror.com/apk/cisco-systems-inc/anyconnect
 
 
 # Gemini搭建教程和环境变量
