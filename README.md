@@ -6,6 +6,12 @@ sudo apt update && sudo apt full-upgrade -y
 
 apt autoremove -y && sudo reboot
 
+sed -i 's/bookworm/trixie/g' /etc/apt/sources.list
+
+sudo apt update && sudo apt full-upgrade -y
+
+apt autoremove -y && sudo reboot
+
 Ubuntu更新系统
 
 sudo apt install ubuntu-release-upgrader-core -y
@@ -17,6 +23,8 @@ sudo apt update && sudo do-release-upgrade
 sudo apt update && sudo apt full-upgrade -y
 
 apt autoremove -y && sudo reboot
+
+安装
 
 chmod +x ocserv.sh && bash ocserv.sh
 
