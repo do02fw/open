@@ -91,7 +91,7 @@ https://github.com/do02fw/ChatGPT-Next-Web/blob/main/README_CN.md
 
 ```bash
 
-CUSTOM_MODELS -all,+gemini-1.5-pro-latest
+CUSTOM_MODELS -all,+gemini-1.5-pro
 DISABLE_FAST_LINK 1
 HIDE_USER_API_KEY 1
 GOOGLE_API_KEY 密钥
