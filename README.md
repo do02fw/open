@@ -12,6 +12,14 @@ sudo apt update && sudo apt full-upgrade -y
 
 sudo apt autoremove -y && sudo reboot
 
+更新到测试版
+
+sed -i 's/bookworm/trixie/g' /etc/apt/sources.list && sudo apt update && sudo apt full-upgrade -y
+
+apt autoremove -y && sudo reboot
+
+更新内核
+
 apt-cache search linux-image
 
 复制+bpo-rt-amd64最新版的名称
