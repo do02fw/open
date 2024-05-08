@@ -34,7 +34,7 @@ sudo apt install ubuntu-release-upgrader-core -y && sudo apt update && sudo do-r
 
 apt autoremove -y && sudo reboot
 
-Ubuntu从LTS版更新到正式版
+Ubuntu LTS版更新到正式版
 
 sudo sed -i 's/Prompt=lts/Prompt=normal/g' /etc/update-manager/release-upgrades && sudo apt update && sudo apt full-upgrade -y
 
@@ -44,7 +44,7 @@ sudo apt update && sudo do-release-upgrade
 
 apt autoremove -y && sudo reboot
 
-从Ubuntu正式版更新到开发版
+Ubuntu正式版更新到开发版
 
 sudo apt update && sudo do-release-upgrade -d
 
