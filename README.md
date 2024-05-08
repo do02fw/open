@@ -26,6 +26,10 @@ apt autoremove -y && sudo apt update && sudo do-release-upgrade
 
 apt autoremove -y && sudo reboot
 
+如果依赖包更新失败强制更新
+
+sudo apt install aptitude && sudo aptitude full-upgrade
+
 # ocserv配置教程
 
 安装
