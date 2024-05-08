@@ -117,11 +117,11 @@ Debian12系统
 
 mkdir -p /etc/apt/keyrings && apt-get install gpg && sudo curl -fsSL https://swupdate.openvpn.net/repos/repo-public.gpg | gpg --dearmor > /etc/apt/keyrings/openvpn-repo-public.gpg && echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/testing bookworm main" > /etc/apt/sources.list.d/openvpn-aptrepo.list && sudo wget https://git.io/vpn -O openvpn-install.sh && sudo bash openvpn-install.sh
 
-选择tcp dns 1.1.1.1 端口65535
+选择udp dns 1.1.1.1 端口65535
              
 # 安装完成后执行
 
-sed -i 's/1.0.0.1/2606:4700:4700::1001/g' /etc/openvpn/server/server.conf && sed -i 's/1.1.1.1/1.0.0.1/g' /etc/openvpn/server/server.conf && echo '--data-ciphers chacha20-poly1305' >> /etc/openvpn/server/server.conf && echo 'duplicate-cn' >> /etc/openvpn/server/server.conf
+sed -i 's/1.0.0.1/2606:4700:4700::1001/g' /etc/openvpn/server/server.conf && sed -i 's/1.1.1.1/1.0.0.1/g' /etc/openvpn/server/server.conf && echo '--data-ciphers AES-256-GCM' >> /etc/openvpn/server/server.conf && echo 'duplicate-cn' >> /etc/openvpn/server/server.conf
 
 # 服务器没有IPV6的话需要禁用IPv6流量
 
