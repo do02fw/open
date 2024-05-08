@@ -1,4 +1,6 @@
-# 阿里云Ubuntu22.04修改软件源
+# 阿里云修改软件源
+
+Ubuntu22.04
 
 sudo sed -i.bak 's/http:\/\/mirrors.cloud.aliyuncs.com\/ubuntu/http:\/\/archive.ubuntu.com\/ubuntu/g' /etc/apt/sources.list
 
