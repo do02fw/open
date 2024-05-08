@@ -1,3 +1,7 @@
+# Ubuntu22.04修改软件源
+
+sudo sed -i 's/http:\/\/mirrors.cloud.aliyuncs.com\/ubuntu/http:\/\/archive.ubuntu.com\/ubuntu/g' /etc/apt/sources.list
+
 # 系统更新
 
 Debian更新系统
@@ -18,9 +22,7 @@ sudo sed -i 's/Prompt=lts/Prompt=normal/g' /etc/update-manager/release-upgrades
 
 sudo apt update && sudo apt full-upgrade -y
 
-apt autoremove -y && sudo reboot
-
-sudo apt update && sudo do-release-upgrade
+apt autoremove -y && sudo apt update && sudo do-release-upgrade
 
 apt autoremove -y && sudo reboot
 
