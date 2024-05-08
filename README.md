@@ -12,13 +12,13 @@ sudo apt update && sudo apt full-upgrade -y
 
 sudo apt autoremove -y && sudo reboot
 
-更新到测试版
+Debian12更新到测试版
 
 sed -i 's/bookworm/trixie/g' /etc/apt/sources.list && sudo apt update && sudo apt full-upgrade -y
 
 apt autoremove -y && sudo reboot
 
-更新内核
+Debian12更新内核
 
 apt-cache search linux-image
 
@@ -28,13 +28,13 @@ sudo apt install 内核名称
 
 sudo apt autoremove -y && sudo reboot
 
-Ubuntu22更新系统LTS版本
+Ubuntu LTS版更新系统
 
 sudo apt install ubuntu-release-upgrader-core -y && sudo apt update && sudo do-release-upgrade
 
 apt autoremove -y && sudo reboot
 
-Ubuntu22从LTS版更新到正式版
+Ubuntu从LTS版更新到正式版
 
 sudo sed -i 's/Prompt=lts/Prompt=normal/g' /etc/update-manager/release-upgrades && sudo apt update && sudo apt full-upgrade -y
 
@@ -44,7 +44,13 @@ sudo apt update && sudo do-release-upgrade
 
 apt autoremove -y && sudo reboot
 
-Ubuntu22如果依赖包更新失败强制更新
+从Ubuntu正式版更新到开发版
+
+sudo apt update && sudo do-release-upgrade -d
+
+apt autoremove -y && sudo reboot
+
+Ubuntu如果依赖包更新失败强制更新
 
 sudo apt install aptitude && sudo aptitude full-upgrade
 
