@@ -26,12 +26,6 @@ sudo apt update && sudo do-release-upgrade
 
 apt autoremove -y && sudo reboot
 
-Ubuntu从正式版更新到开发版
-
-sudo do-release-upgrade -d
-
-apt autoremove -y && sudo reboot
-
 Ubuntu如果依赖包更新失败强制更新
 
 sudo apt install aptitude && sudo aptitude full-upgrade
