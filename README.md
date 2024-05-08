@@ -111,33 +111,21 @@ GOOGLE_API_KEY 密钥
 
 https://openvpn.net/community-resources/reference-manual-for-openvpn-2-6
 
-# openvpn准备环境
+# 安装openvpn
 
 Ubuntu23系统
 
-mkdir -p /etc/apt/keyrings && apt-get install gpg && sudo curl -fsSL https://swupdate.openvpn.net/repos/repo-public.gpg | gpg --dearmor > /etc/apt/keyrings/openvpn-repo-public.gpg && echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/testing mantic main" > /etc/apt/sources.list.d/openvpn-aptrepo.list
+mkdir -p /etc/apt/keyrings && apt-get install gpg && sudo curl -fsSL https://swupdate.openvpn.net/repos/repo-public.gpg | gpg --dearmor > /etc/apt/keyrings/openvpn-repo-public.gpg && echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/testing mantic main" > /etc/apt/sources.list.d/openvpn-aptrepo.list && sudo wget https://git.io/vpn -O openvpn-install.sh && sudo bash openvpn-install.sh
 
 Debian12系统
 
-mkdir -p /etc/apt/keyrings && apt-get install gpg && sudo curl -fsSL https://swupdate.openvpn.net/repos/repo-public.gpg | gpg --dearmor > /etc/apt/keyrings/openvpn-repo-public.gpg && echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/testing bookworm main" > /etc/apt/sources.list.d/openvpn-aptrepo.list
-
-# 安装启动openvpn服务
-
-wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh
+mkdir -p /etc/apt/keyrings && apt-get install gpg && sudo curl -fsSL https://swupdate.openvpn.net/repos/repo-public.gpg | gpg --dearmor > /etc/apt/keyrings/openvpn-repo-public.gpg && echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/testing bookworm main" > /etc/apt/sources.list.d/openvpn-aptrepo.list && sudo wget https://git.io/vpn -O openvpn-install.sh && sudo bash openvpn-install.sh
              
 # 选择udp dns 1.1.1.1 端口65535
 
 安装完成后执行
 
-sed -i 's/1.0.0.1/2606:4700:4700::1001/g' /etc/openvpn/server/server.conf
-
-sed -i 's/1.1.1.1/1.0.0.1/g' /etc/openvpn/server/server.conf
-
-echo '--data-ciphers AES-256-GCM' >> /etc/openvpn/server/server.conf
-
-echo 'mtu-disc maybe' >> /etc/openvpn/server/server.conf
-
-echo 'duplicate-cn' >> /etc/openvpn/server/server.conf
+sed -i 's/1.0.0.1/2606:4700:4700::1001/g' /etc/openvpn/server/server.conf && sed -i 's/1.1.1.1/1.0.0.1/g' /etc/openvpn/server/server.conf && echo '--data-ciphers AES-256-GCM' >> /etc/openvpn/server/server.conf && echo 'mtu-disc maybe' >> /etc/openvpn/server/server.conf && echo 'duplicate-cn' >> /etc/openvpn/server/server.conf
 
 # 禁用客户端的IPv6流量
 
