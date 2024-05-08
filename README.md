@@ -111,7 +111,7 @@ Ubuntu23系统
 
 echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/testing mantic main" > /etc/apt/sources.list.d/openvpn-aptrepo.list
 
-Ubuntu12系统
+Debian12系统
 
 echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/testing bookworm main" > /etc/apt/sources.list.d/openvpn-aptrepo.list
 
