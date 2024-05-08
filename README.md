@@ -34,20 +34,17 @@ sudo apt install aptitude && sudo aptitude full-upgrade
 
 # ocserv配置教程
 
-安装
-
-chmod +x ocserv.sh && bash ocserv.sh
+安装chmod +x ocserv.sh && bash ocserv.sh
 
 完成后执行或者直接替换配置文件ocserv.conf
 
 开启IPV6
 
-修改/etc/sysctl.conf开启ipv6转发
+修改/etc/sysctl.conf开启IPV6转发
 
 sudo ip6tables -t nat -A POSTROUTING -j MASQUERADE
 
 sudo ip6tables-save > /etc/iptables/rules.v6
-
 
 更新系统后没网的话执行一下
 
@@ -63,28 +60,19 @@ https://www.apkmirror.com/apk/cisco-systems-inc/anyconnect
 
 # Gemini搭建教程和环境变量
 
-安全等级修改
-
-/app/client/platforms/google.ts
-
-里面的BLOCK_ONLY_HIGH改成BLOCK_NONE
+安全等级修改/app/client/platforms/google.ts里面的BLOCK_ONLY_HIGH改成BLOCK_NONE
 
 参考https://github.com/do02fw/ChatGPT-Next-Web/blob/main/app/client/platforms/google.ts
 
-修改面具中的prompt删除多余的面具
+修改面具中的prompt删除多余的面具/app/masks/cn.ts和/app/masks/en.ts
 
-/app/masks/cn.ts和/app/masks/en.ts
-
-越狱prompt
-
-https://github.com/trinib/ZORG-Jailbreak-Prompt-Text
+越狱prompt https://github.com/trinib/ZORG-Jailbreak-Prompt-Text
 
 参考
 
 https://github.com/do02fw/ChatGPT-Next-Web/blob/main/app/masks/cn.ts
 
 https://github.com/do02fw/ChatGPT-Next-Web/blob/main/app/masks/en.ts
-
 
 搭建和更新教程
 
