@@ -1,6 +1,6 @@
 # Ubuntu22.04修改软件源
 
-sudo sed -i 's/http:\/\/mirrors.cloud.aliyuncs.com\/ubuntu/http:\/\/archive.ubuntu.com\/ubuntu/g' /etc/apt/sources.list
+sudo sed -i.bak 's/http:\/\/mirrors.cloud.aliyuncs.com\/ubuntu/http:\/\/archive.ubuntu.com\/ubuntu/g' /etc/apt/sources.list
 
 # 系统更新
 
