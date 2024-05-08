@@ -6,9 +6,17 @@ sudo sed -i.bak 's/http:\/\/mirrors.cloud.aliyuncs.com\/ubuntu/http:\/\/archive.
 
 # 系统更新
 
-Debian12更新系统
+Debian12更新系统和内核
 
 sudo apt update && sudo apt full-upgrade -y
+
+sudo apt autoremove -y && sudo reboot
+
+apt-cache search linux-image
+
+复制+bpo-rt-amd64最新版的名称
+
+sudo apt install 内核名称
 
 sudo apt autoremove -y && sudo reboot
 
