@@ -16,7 +16,7 @@ sudo apt install ubuntu-release-upgrader-core -y && sudo apt update && sudo do-r
 
 apt autoremove -y && sudo reboot
 
-切换到正式版
+Ubuntu从LTS版更新到正式版
 
 sudo sed -i 's/Prompt=lts/Prompt=normal/g' /etc/update-manager/release-upgrades && sudo apt update && sudo apt full-upgrade -y
 
@@ -26,13 +26,13 @@ sudo apt update && sudo do-release-upgrade
 
 apt autoremove -y && sudo reboot
 
-从正式版更新到开发版
+Ubuntu从正式版更新到开发版
 
 sudo do-release-upgrade -d
 
 apt autoremove -y && sudo reboot
 
-如果依赖包更新失败强制更新
+Ubuntu如果依赖包更新失败强制更新
 
 sudo apt install aptitude && sudo aptitude full-upgrade
 
