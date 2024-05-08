@@ -99,7 +99,7 @@ GOOGLE_API_KEY 密钥
 
 https://openvpn.net/community-resources/reference-manual-for-openvpn-2-6
 
-# 安装openvpn
+# 安装openvpn，安装前系统必须是最新版
 
 Ubuntu23系统
 
@@ -115,7 +115,7 @@ mkdir -p /etc/apt/keyrings && apt-get install gpg && sudo curl -fsSL https://swu
 
 sed -i 's/1.0.0.1/2606:4700:4700::1001/g' /etc/openvpn/server/server.conf && sed -i 's/1.1.1.1/1.0.0.1/g' /etc/openvpn/server/server.conf && echo '--data-ciphers AES-256-GCM' >> /etc/openvpn/server/server.conf && echo 'mtu-disc yes' >> /etc/openvpn/server/server.conf && echo 'duplicate-cn' >> /etc/openvpn/server/server.conf
 
-# 禁用客户端的IPv6流量
+# 服务器没有IPV6的话需要禁用IPv6流量
 
 echo 'push "redirect-gateway ipv6 def1 bypass-dhcp"' >> /etc/openvpn/server/server.conf
 
