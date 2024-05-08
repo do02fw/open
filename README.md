@@ -52,7 +52,7 @@ apt autoremove -y && sudo reboot
 
 Ubuntu如果依赖包更新失败强制更新
 
-sudo apt install aptitude -y && sudo aptitude full-upgrade
+sudo apt install aptitude -y && sudo aptitude full-upgrade -y
 
 # ocserv配置教程
 
