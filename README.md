@@ -12,12 +12,6 @@ sudo apt update && sudo apt full-upgrade -y
 
 sudo apt autoremove -y && sudo reboot
 
-Debian12更新到测试版
-
-sed -i 's/bookworm/trixie/g' /etc/apt/sources.list && sudo apt update && sudo apt full-upgrade -y
-
-apt autoremove -y && sudo reboot
-
 Debian12更新内核
 
 apt-cache search linux-image
@@ -41,12 +35,6 @@ sudo sed -i 's/Prompt=lts/Prompt=normal/g' /etc/update-manager/release-upgrades 
 apt autoremove -y && sudo reboot
 
 sudo apt update && sudo do-release-upgrade
-
-apt autoremove -y && sudo reboot
-
-Ubuntu正式版更新到开发版
-
-sudo apt update && sudo do-release-upgrade -d
 
 apt autoremove -y && sudo reboot
 
