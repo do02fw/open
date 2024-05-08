@@ -1,4 +1,4 @@
-# ocserv配置教程
+# 系统更新
 
 Debian更新系统
 
@@ -12,9 +12,13 @@ sudo apt update && sudo apt full-upgrade -y
 
 apt autoremove -y && sudo reboot
 
-Ubuntu更新系统
+Ubuntu更新系统LTS版本
 
 sudo apt install ubuntu-release-upgrader-core -y
+
+sudo apt update && sudo do-release-upgrade
+
+切换到正式版
 
 sudo sed -i 's/Prompt=lts/Prompt=normal/g' /etc/update-manager/release-upgrades
 
@@ -23,6 +27,8 @@ sudo apt update && sudo do-release-upgrade
 sudo apt update && sudo apt full-upgrade -y
 
 apt autoremove -y && sudo reboot
+
+# ocserv配置教程
 
 安装
 
@@ -50,7 +56,6 @@ sudo iptables-save > /etc/iptables/rules.v4
 https://www.catpaws2011.com/docs/?p=420 或者 https://gitlab.com/openconnect/openconnect-gui/-/releases
 
 https://www.apkmirror.com/apk/cisco-systems-inc/anyconnect
-
 
 # Gemini搭建教程和环境变量
 
@@ -131,7 +136,6 @@ echo '--data-ciphers AES-256-GCM' >> /etc/openvpn/server/server.conf
 echo 'mtu-disc maybe' >> /etc/openvpn/server/server.conf
 
 echo 'duplicate-cn' >> /etc/openvpn/server/server.conf
-
 
 # 禁用客户端的IPv6流量
 
