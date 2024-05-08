@@ -10,9 +10,9 @@ apt autoremove -y && sudo reboot
 
 Ubuntu更新系统LTS版本
 
-sudo apt install ubuntu-release-upgrader-core -y
+sudo apt install ubuntu-release-upgrader-core -y && sudo apt update && sudo do-release-upgrade
 
-sudo apt update && sudo do-release-upgrade
+apt autoremove -y && sudo reboot
 
 切换到正式版
 
