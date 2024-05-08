@@ -6,19 +6,19 @@ sudo sed -i.bak 's/http:\/\/mirrors.cloud.aliyuncs.com\/ubuntu/http:\/\/archive.
 
 # 系统更新
 
-Debian更新系统
+Debian12更新系统
 
 sudo apt update && sudo apt full-upgrade -y
 
 sudo apt autoremove -y && sudo reboot
 
-Ubuntu更新系统LTS版本
+Ubuntu22更新系统LTS版本
 
 sudo apt install ubuntu-release-upgrader-core -y && sudo apt update && sudo do-release-upgrade
 
 apt autoremove -y && sudo reboot
 
-Ubuntu从LTS版更新到正式版
+Ubuntu22从LTS版更新到正式版
 
 sudo sed -i 's/Prompt=lts/Prompt=normal/g' /etc/update-manager/release-upgrades && sudo apt update && sudo apt full-upgrade -y
 
@@ -28,7 +28,7 @@ sudo apt update && sudo do-release-upgrade
 
 apt autoremove -y && sudo reboot
 
-Ubuntu如果依赖包更新失败强制更新
+Ubuntu22如果依赖包更新失败强制更新
 
 sudo apt install aptitude && sudo aptitude full-upgrade
 
