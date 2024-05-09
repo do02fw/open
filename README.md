@@ -108,23 +108,13 @@ chmod +x ocserv.sh && bash ocserv.sh
 修改/etc/sysctl.conf开启IPV6转发
 ```bash
 
-sudo ip6tables -t nat -A POSTROUTING -j MASQUERADE
-
-```
-```bash
-
-sudo ip6tables-save > /etc/iptables/rules.v6
+sudo ip6tables -t nat -A POSTROUTING -j MASQUERADE && sudo ip6tables-save > /etc/iptables/rules.v6
 
 ```
 更新系统后没网的话执行一下
 ```bash
 
-sudo iptables -t nat -A POSTROUTING -j MASQUERADE
-
-```
-```bash
-
-sudo iptables-save > /etc/iptables/rules.v4
+sudo iptables -t nat -A POSTROUTING -j MASQUERADE && sudo iptables-save > /etc/iptables/rules.v4
 
 ```
 客户端下载
