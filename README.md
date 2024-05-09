@@ -1,12 +1,4 @@
-# 阿里云修改软件源
-Ubuntu22.04
-```bash
-
-sudo sed -i.bak 's/http:\/\/mirrors.cloud.aliyuncs.com\/ubuntu/http:\/\/archive.ubuntu.com\/ubuntu/g' /etc/apt/sources.list
-
-```
 # 系统更新
-
 Debian12更新系统和内核
 
 ```bash
@@ -94,7 +86,6 @@ sudo apt install aptitude -y && sudo aptitude full-upgrade -y
 
 ```
 # ocserv配置教程
-
 安装
 ```bash
 
@@ -122,9 +113,7 @@ sudo iptables -t nat -A POSTROUTING -j MASQUERADE && sudo iptables-save > /etc/i
 https://www.catpaws2011.com/docs/?p=420 或者 https://gitlab.com/openconnect/openconnect-gui/-/releases
 
 https://www.apkmirror.com/apk/cisco-systems-inc/anyconnect
-
 # Gemini搭建教程和环境变量
-
 安全等级修改/app/client/platforms/google.ts里面的BLOCK_ONLY_HIGH改成BLOCK_NONE
 
 参考https://github.com/do02fw/ChatGPT-Next-Web/blob/main/app/client/platforms/google.ts
@@ -159,11 +148,8 @@ GOOGLE_API_KEY 密钥
 
 ```
 # openvpn官方文档
-
 https://openvpn.net/community-resources/reference-manual-for-openvpn-2-6
-
 # 安装openvpn，安装前系统必须是最新版
-
 Ubuntu23系统
 ```bash
 
@@ -196,14 +182,12 @@ sudo service openvpn restart
 
 ```
 # 使用IPV6连接
-
 修改配置文件vim /etc/openvpn/server/server.conf
 
 添加
 local <IPv6地址>
 
 客户端和服务器的配置文件中的proto udp需要改为proto udp6
-
 # 官方客户端下载
 
 https://openvpn.net/client/client-connect-vpn-for-windows/
