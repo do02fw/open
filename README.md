@@ -1,9 +1,11 @@
 # 阿里云修改软件源
+```bash
 
 Ubuntu22.04
 
 sudo sed -i.bak 's/http:\/\/mirrors.cloud.aliyuncs.com\/ubuntu/http:\/\/archive.ubuntu.com\/ubuntu/g' /etc/apt/sources.list
 
+```
 # 系统更新
 
 Debian12更新系统和内核
