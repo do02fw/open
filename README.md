@@ -31,6 +31,7 @@ apt autoremove -y && sudo reboot
 
 ```
 Debian12更新内核
+查找内核
 ```bash
 
 apt-cache search linux-image
