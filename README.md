@@ -37,7 +37,7 @@ Debian12更新内核
 apt-cache search linux-image
 
 ```
-复制cloud最新版的名称
+复制cloud amd64最新版的名称
 
 ```bash
 
