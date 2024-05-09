@@ -171,13 +171,13 @@ https://openvpn.net/community-resources/reference-manual-for-openvpn-2-6
 Ubuntu23系统
 ```bash
 
-mkdir -p /etc/apt/keyrings && apt-get install gpg && sudo curl -fsSL https://swupdate.openvpn.net/repos/repo-public.gpg | gpg --dearmor > /etc/apt/keyrings/openvpn-repo-public.gpg && echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/testing mantic main" > /etc/apt/sources.list.d/openvpn-aptrepo.list && sudo wget https://git.io/vpn -O openvpn-install.sh && sudo bash openvpn-install.sh
+mkdir -p /etc/apt/keyrings && apt-get install gpg && sudo curl -fsSL https://swupdate.openvpn.net/repos/repo-public.gpg | gpg --dearmor > /etc/apt/keyrings/openvpn-repo-public.gpg && echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/release/2.6 mantic main" > /etc/apt/sources.list.d/openvpn-aptrepo.list && sudo wget https://git.io/vpn -O openvpn-install.sh && sudo bash openvpn-install.sh
 
 ```
 Debian12系统
 ```bash
 
-mkdir -p /etc/apt/keyrings && apt-get install gpg && sudo curl -fsSL https://swupdate.openvpn.net/repos/repo-public.gpg | gpg --dearmor > /etc/apt/keyrings/openvpn-repo-public.gpg && echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/testing bookworm main" > /etc/apt/sources.list.d/openvpn-aptrepo.list && sudo wget https://git.io/vpn -O openvpn-install.sh && sudo bash openvpn-install.sh
+mkdir -p /etc/apt/keyrings && apt-get install gpg && sudo curl -fsSL https://swupdate.openvpn.net/repos/repo-public.gpg | gpg --dearmor > /etc/apt/keyrings/openvpn-repo-public.gpg && echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/release/2.6 bookworm main" > /etc/apt/sources.list.d/openvpn-aptrepo.list && sudo wget https://git.io/vpn -O openvpn-install.sh && sudo bash openvpn-install.sh
 
 ```
 选UDP 端口65535 DNS选1.1.1.1          
