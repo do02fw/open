@@ -8,6 +8,11 @@ sudo sed -i.bak 's/http:\/\/mirrors.cloud.aliyuncs.com\/ubuntu/http:\/\/archive.
 # 系统更新
 
 Debian12更新系统和内核
+
+* sudo apt update &amp;&amp; sudo apt full-upgrade -y
+* sudo apt autoremove -y &amp;&amp; sudo reboot
+
+
 ```bash
 
 sudo apt update && sudo apt full-upgrade -y
