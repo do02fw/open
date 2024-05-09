@@ -37,6 +37,12 @@ Debian12更新内核
 apt-cache search linux-image
 
 ```
+搜不到内核的话添加源
+```bash
+
+echo "deb http://deb.debian.org/debian bookworm-backports main" | sudo tee -a /etc/apt/sources.list
+
+```
 复制名字包含cloud amd64的内核名称
 
 ```bash
