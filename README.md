@@ -9,13 +9,12 @@ sudo sed -i.bak 's/http:\/\/mirrors.cloud.aliyuncs.com\/ubuntu/http:\/\/archive.
 
 Debian12更新系统和内核
 
-* sudo apt update &amp;&amp; sudo apt full-upgrade -y
-* sudo apt autoremove -y &amp;&amp; sudo reboot
-
-
 ```bash
 
 sudo apt update && sudo apt full-upgrade -y
+
+```
+```bash
 
 sudo apt autoremove -y && sudo reboot
 
@@ -25,6 +24,9 @@ Debian12更新到测试版
 
 sed -i 's/bookworm/trixie/g' /etc/apt/sources.list && sudo apt update && sudo apt full-upgrade -y -y
 
+```
+```bash
+
 apt autoremove -y && sudo reboot
 
 ```
@@ -33,9 +35,15 @@ Debian12更新内核
 
 apt-cache search linux-image
 
+```
 复制+bpo-rt-amd64最新版的名称
 
+```bash
+
 sudo apt install 内核名称
+
+```
+```bash
 
 sudo apt autoremove -y && sudo reboot
 
@@ -45,6 +53,9 @@ Ubuntu LTS版更新系统
 
 sudo apt install ubuntu-release-upgrader-core -y && sudo apt update && sudo do-release-upgrade
 
+```
+```bash
+
 apt autoremove -y && sudo reboot
 
 ```
@@ -53,9 +64,18 @@ Ubuntu LTS版更新到正式版
 
 sudo sed -i 's/Prompt=lts/Prompt=normal/g' /etc/update-manager/release-upgrades && sudo apt update && sudo apt full-upgrade -y
 
+```
+```bash
+
 apt autoremove -y && sudo reboot
 
+```
+```bash
+
 sudo apt update && sudo do-release-upgrade
+
+```
+```bash
 
 apt autoremove -y && sudo reboot
 
@@ -83,6 +103,9 @@ chmod +x ocserv.sh && bash ocserv.sh
 
 sudo ip6tables -t nat -A POSTROUTING -j MASQUERADE
 
+```
+```bash
+
 sudo ip6tables-save > /etc/iptables/rules.v6
 
 ```
@@ -90,6 +113,9 @@ sudo ip6tables-save > /etc/iptables/rules.v6
 ```bash
 
 sudo iptables -t nat -A POSTROUTING -j MASQUERADE
+
+```
+```bash
 
 sudo iptables-save > /etc/iptables/rules.v4
 
@@ -192,7 +218,13 @@ https://www.apkmirror.com/apk/openvpn/openvpn-connect/
 
 sudo apt install openjdk-21-jdk -y
 
+```
+```bash
+
 wget https://github.com/zjns/revanced-cli/releases/download/v4.6.0.1/revanced-cli.jar && wget https://github.com/BiliRoamingX/BiliRoamingX/releases/download/v1.20.3/BiliRoamingX-integrations-1.20.3.apk && wget https://github.com/BiliRoamingX/BiliRoamingX/releases/download/v1.20.3/BiliRoamingX-patches-1.20.3.jar && wget https://dl.hdslb.com/mobile/latest/android64/iBiliPlayer-bili.apk
+
+```
+```bash
 
 java -jar revanced-cli.jar patch --merge BiliRoamingX-integrations-1.20.3.apk --patch-bundle BiliRoamingX-patches-1.20.3.jar --signing-levels 2,3 iBiliPlayer-bili.apk
 
