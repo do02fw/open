@@ -1,7 +1,6 @@
 # 阿里云修改软件源
-```bash
-
 Ubuntu22.04
+```bash
 
 sudo sed -i.bak 's/http:\/\/mirrors.cloud.aliyuncs.com\/ubuntu/http:\/\/archive.ubuntu.com\/ubuntu/g' /etc/apt/sources.list
 
@@ -9,18 +8,23 @@ sudo sed -i.bak 's/http:\/\/mirrors.cloud.aliyuncs.com\/ubuntu/http:\/\/archive.
 # 系统更新
 
 Debian12更新系统和内核
+```bash
 
 sudo apt update && sudo apt full-upgrade -y
 
 sudo apt autoremove -y && sudo reboot
 
+```
 Debian12更新到测试版
+```bash
 
 sed -i 's/bookworm/trixie/g' /etc/apt/sources.list && sudo apt update && sudo apt full-upgrade -y -y
 
 apt autoremove -y && sudo reboot
 
+```
 Debian12更新内核
+```bash
 
 apt-cache search linux-image
 
@@ -30,13 +34,17 @@ sudo apt install 内核名称
 
 sudo apt autoremove -y && sudo reboot
 
+```
 Ubuntu LTS版更新系统
+```bash
 
 sudo apt install ubuntu-release-upgrader-core -y && sudo apt update && sudo do-release-upgrade
 
 apt autoremove -y && sudo reboot
 
+```
 Ubuntu LTS版更新到正式版
+```bash
 
 sudo sed -i 's/Prompt=lts/Prompt=normal/g' /etc/update-manager/release-upgrades && sudo apt update && sudo apt full-upgrade -y
 
@@ -46,30 +54,41 @@ sudo apt update && sudo do-release-upgrade
 
 apt autoremove -y && sudo reboot
 
+```
 Ubuntu如果依赖包更新失败强制更新
+```bash
 
 sudo apt install aptitude -y && sudo aptitude full-upgrade -y
 
+```
 # ocserv配置教程
 
-安装chmod +x ocserv.sh && bash ocserv.sh
+安装
+```bash
 
+chmod +x ocserv.sh && bash ocserv.sh
+
+```
 完成后执行或者直接替换配置文件ocserv.conf
 
 开启IPV6
 
 修改/etc/sysctl.conf开启IPV6转发
+```bash
 
 sudo ip6tables -t nat -A POSTROUTING -j MASQUERADE
 
 sudo ip6tables-save > /etc/iptables/rules.v6
 
+```
 更新系统后没网的话执行一下
+```bash
 
 sudo iptables -t nat -A POSTROUTING -j MASQUERADE
 
 sudo iptables-save > /etc/iptables/rules.v4
 
+```
 客户端下载
 
 https://www.catpaws2011.com/docs/?p=420 或者 https://gitlab.com/openconnect/openconnect-gui/-/releases
@@ -103,7 +122,6 @@ https://vercel.com/
 环境变量 
 
 https://github.com/do02fw/ChatGPT-Next-Web/blob/main/README_CN.md
-
 ```bash
 
 CUSTOM_MODELS -all,+gemini-1.5-pro
@@ -112,7 +130,6 @@ HIDE_USER_API_KEY 1
 GOOGLE_API_KEY 密钥
 
 ```
-
 # openvpn官方文档
 
 https://openvpn.net/community-resources/reference-manual-for-openvpn-2-6
@@ -120,27 +137,36 @@ https://openvpn.net/community-resources/reference-manual-for-openvpn-2-6
 # 安装openvpn，安装前系统必须是最新版
 
 Ubuntu23系统
+```bash
 
 mkdir -p /etc/apt/keyrings && apt-get install gpg && sudo curl -fsSL https://swupdate.openvpn.net/repos/repo-public.gpg | gpg --dearmor > /etc/apt/keyrings/openvpn-repo-public.gpg && echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/testing mantic main" > /etc/apt/sources.list.d/openvpn-aptrepo.list && sudo wget https://git.io/vpn -O openvpn-install.sh && sudo bash openvpn-install.sh
 
+```
 Debian12系统
+```bash
 
 mkdir -p /etc/apt/keyrings && apt-get install gpg && sudo curl -fsSL https://swupdate.openvpn.net/repos/repo-public.gpg | gpg --dearmor > /etc/apt/keyrings/openvpn-repo-public.gpg && echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/testing bookworm main" > /etc/apt/sources.list.d/openvpn-aptrepo.list && sudo wget https://git.io/vpn -O openvpn-install.sh && sudo bash openvpn-install.sh
 
-选UDP 端口65535 DNS选1.1.1.1
-             
+```
+选UDP 端口65535 DNS选1.1.1.1          
 # 安装完成后执行
+```bash
 
 sed -i 's/1.0.0.1/2606:4700:4700::1111/g' /etc/openvpn/server/server.conf && echo '--data-ciphers AES-256-GCM' >> /etc/openvpn/server/server.conf && echo 'duplicate-cn' >> /etc/openvpn/server/server.conf
 
+```
 # 服务器没有IPV6的话需要禁用IPv6流量
+```bash
 
 echo 'push "redirect-gateway ipv6 def1 bypass-dhcp"' >> /etc/openvpn/server/server.conf
 
+```
 # 重启openvpn服务，最好重启服务器
+```bash
 
 sudo service openvpn restart
 
+```
 # 使用IPV6连接
 
 修改配置文件vim /etc/openvpn/server/server.conf
@@ -157,6 +183,7 @@ https://openvpn.net/client/client-connect-vpn-for-windows/
 https://www.apkmirror.com/apk/openvpn/openvpn-connect/
 
 # 编译哔哩哔哩
+```bash
 
 sudo apt install openjdk-21-jdk -y
 
@@ -164,3 +191,4 @@ wget https://github.com/zjns/revanced-cli/releases/download/v4.6.0.1/revanced-cl
 
 java -jar revanced-cli.jar patch --merge BiliRoamingX-integrations-1.20.3.apk --patch-bundle BiliRoamingX-patches-1.20.3.jar --signing-levels 2,3 iBiliPlayer-bili.apk
 
+```
