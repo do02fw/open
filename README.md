@@ -14,7 +14,7 @@ sudo apt autoremove -y && sudo reboot
 
 Debian12更新到测试版
 
-sed -i 's/bookworm/trixie/g' /etc/apt/sources.list && sudo apt update && sudo apt full-upgrade -y
+sed -i 's/bookworm/trixie/g' /etc/apt/sources.list && sudo apt update && sudo apt full-upgrade -y -y
 
 apt autoremove -y && sudo reboot
 
