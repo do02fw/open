@@ -51,7 +51,7 @@ sudo apt autoremove -y && sudo reboot
 安装
 ```bash
 
-chmod +x ocserv.sh && bash ocserv.sh
+sudo chmod 777 ocserv.sh && sudo bash ocserv.sh
 
 ```
 完成后执行或者直接替换配置文件ocserv.conf
@@ -116,6 +116,12 @@ Debian12系统
 ```bash
 
 mkdir -p /etc/apt/keyrings && apt-get install gpg && sudo curl -fsSL https://swupdate.openvpn.net/repos/repo-public.gpg | gpg --dearmor > /etc/apt/keyrings/openvpn-repo-public.gpg && echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/release/2.6 bookworm main" > /etc/apt/sources.list.d/openvpn-aptrepo.list && sudo wget https://git.io/vpn -O openvpn-install.sh && sudo bash openvpn-install.sh
+
+```
+Debian测试版系统
+```bash
+
+mkdir -p /etc/apt/keyrings && apt-get install gpg && sudo curl -fsSL https://swupdate.openvpn.net/repos/repo-public.gpg | gpg --dearmor > /etc/apt/keyrings/openvpn-repo-public.gpg && echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/release/2.6 bookworm main" > /etc/apt/sources.list.d/openvpn-aptrepo.list && sudo chmod 777 openvpn-install.sh && sudo bash openvpn-install.sh
 
 ```
 选UDP 端口65535 DNS选1.1.1.1          
