@@ -47,44 +47,6 @@ sudo apt install 内核名称
 sudo apt autoremove -y && sudo reboot
 
 ```
-Ubuntu LTS版更新系统
-```bash
-
-sudo apt install ubuntu-release-upgrader-core -y && sudo apt update && sudo do-release-upgrade
-
-```
-```bash
-
-apt autoremove -y && sudo reboot
-
-```
-Ubuntu LTS版更新到正式版
-```bash
-
-sudo sed -i 's/Prompt=lts/Prompt=normal/g' /etc/update-manager/release-upgrades && sudo apt update && sudo apt full-upgrade -y
-
-```
-```bash
-
-apt autoremove -y && sudo reboot
-
-```
-```bash
-
-sudo apt update && sudo do-release-upgrade
-
-```
-```bash
-
-apt autoremove -y && sudo reboot
-
-```
-Ubuntu如果依赖包更新失败强制更新
-```bash
-
-sudo apt install aptitude -y && sudo aptitude full-upgrade -y
-
-```
 # ocserv配置教程
 安装
 ```bash
@@ -150,12 +112,6 @@ GOOGLE_API_KEY 密钥
 # openvpn官方文档
 https://openvpn.net/community-resources/reference-manual-for-openvpn-2-6
 # 安装openvpn，安装前系统必须是最新版
-Ubuntu23系统
-```bash
-
-mkdir -p /etc/apt/keyrings && apt-get install gpg && sudo curl -fsSL https://swupdate.openvpn.net/repos/repo-public.gpg | gpg --dearmor > /etc/apt/keyrings/openvpn-repo-public.gpg && echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/release/2.6 mantic main" > /etc/apt/sources.list.d/openvpn-aptrepo.list && sudo wget https://git.io/vpn -O openvpn-install.sh && sudo bash openvpn-install.sh
-
-```
 Debian12系统
 ```bash
 
