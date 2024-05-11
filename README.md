@@ -1,6 +1,5 @@
 # 系统更新
 Debian12更新系统和内核
-
 ```bash
 
 sudo apt update && sudo apt full-upgrade -y
@@ -36,7 +35,6 @@ echo "deb http://deb.debian.org/debian bookworm-backports main" | sudo tee -a /e
 
 ```
 复制名字包含cloud amd64的内核名称
-
 ```bash
 
 sudo apt install 内核名称
@@ -128,7 +126,7 @@ mkdir -p /etc/apt/keyrings && apt-get install gpg && sudo curl -fsSL https://swu
 # 安装完成后执行
 ```bash
 
-sed -i 's/1.0.0.1/2606:4700:4700::1111/g' /etc/openvpn/server/server.conf && echo '--data-ciphers AES-256-GCM' >> /etc/openvpn/server/server.conf && echo 'duplicate-cn' >> /etc/openvpn/server/server.conf && echo 'mtu-disc maybe' >> /etc/openvpn/server/server.conf
+sed -i 's/1.0.0.1/2606:4700:4700::1111/g' /etc/openvpn/server/server.conf && echo '--data-ciphers AES-256-GCM' >> /etc/openvpn/server/server.conf && echo 'duplicate-cn' >> /etc/openvpn/server/server.conf
 
 ```
 # 服务器没有IPV6的话需要禁用IPv6流量
