@@ -162,7 +162,7 @@ sudo apt install openjdk-21-jdk -y
 ```
 ```bash
 
-wget https://github.com/zjns/revanced-cli/releases/download/v4.6.0.1/revanced-cli.jar && wget https://github.com/BiliRoamingX/BiliRoamingX/releases/download/v1.20.3/BiliRoamingX-integrations-1.20.3.apk && wget https://github.com/BiliRoamingX/BiliRoamingX/releases/download/v1.20.3/BiliRoamingX-patches-1.20.3.jar && wget https://dl.hdslb.com/mobile/latest/android64/iBiliPlayer-bili.apk
+wget https://github.com/zjns/revanced-cli/releases/download/v4.6.0.1/revanced-cli.jar && wget https://github.com/BiliRoamingX/BiliRoamingX/releases/download/v1.20.3/BiliRoamingX-integrations.apk && wget https://github.com/BiliRoamingX/BiliRoamingX/releases/download/v1.20.3/BiliRoamingX-patches.jar && wget https://dl.hdslb.com/mobile/latest/android64/iBiliPlayer-bili.apk
 
 ```
 ```bash
