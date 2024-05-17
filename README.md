@@ -167,6 +167,6 @@ wget https://github.com/zjns/revanced-cli/releases/download/v4.6.0.1/revanced-cl
 ```
 ```bash
 
-java -jar revanced-cli.jar patch --merge BiliRoamingX-integrations-1.20.3.apk --patch-bundle BiliRoamingX-patches-1.20.3.jar --signing-levels 2,3 iBiliPlayer-bili.apk
+java -jar revanced-cli.jar patch --merge BiliRoamingX-integrations.apk --patch-bundle BiliRoamingX-patches.jar --signing-levels 2,3 iBiliPlayer-bili.apk
 
 ```
