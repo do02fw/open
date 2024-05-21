@@ -45,7 +45,6 @@ sudo apt install 内核名称
 sudo apt autoremove -y && sudo reboot
 
 ```
-```
 Ubuntu LTS版更新系统
 ```bash
 
