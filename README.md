@@ -1,50 +1,4 @@
 # 系统更新
-Debian12更新系统和内核
-```bash
-
-sudo apt update && sudo apt full-upgrade -y
-
-```
-```bash
-
-sudo apt autoremove -y && sudo reboot
-
-```
-Debian12更新到测试版
-```bash
-
-sed -i 's/bookworm/trixie/g' /etc/apt/sources.list && sudo apt update && sudo apt full-upgrade -y -y
-
-```
-```bash
-
-apt autoremove -y && sudo reboot
-
-```
-Debian12更新内核
-查找内核
-```bash
-
-apt-cache search linux-image
-
-```
-搜不到内核的话添加源
-```bash
-
-echo "deb http://deb.debian.org/debian bookworm-backports main" | sudo tee -a /etc/apt/sources.list
-
-```
-复制名字包含cloud amd64的内核名称
-```bash
-
-sudo apt install 内核名称
-
-```
-```bash
-
-sudo apt autoremove -y && sudo reboot
-
-```
 Ubuntu LTS版更新系统
 ```bash
 
@@ -163,12 +117,6 @@ Ubuntu24
 ```bash
 
 mkdir -p /etc/apt/keyrings && apt-get install gpg && sudo curl -fsSL https://swupdate.openvpn.net/repos/repo-public.gpg | gpg --dearmor > /etc/apt/keyrings/openvpn-repo-public.gpg && echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/release/2.6 mantic main" > /etc/apt/sources.list.d/openvpn-aptrepo.list && sudo wget https://git.io/vpn -O openvpn-install.sh && sudo bash openvpn-install.sh
-
-```
-Debian测试版
-```bash
-
-mkdir -p /etc/apt/keyrings && apt-get install gpg && sudo curl -fsSL https://swupdate.openvpn.net/repos/repo-public.gpg | gpg --dearmor > /etc/apt/keyrings/openvpn-repo-public.gpg && echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/release/2.6 bookworm main" > /etc/apt/sources.list.d/openvpn-aptrepo.list && sudo chmod 777 openvpn-install.sh && sudo bash openvpn-install.sh
 
 ```
 选UDP 端口65535 DNS选1.1.1.1          
