@@ -190,6 +190,8 @@ https://openvpn.net/client/client-connect-vpn-for-windows/
 https://www.apkmirror.com/apk/openvpn/openvpn-connect/
 
 # 编译哔哩哔哩
+JDK下载
+https://jdk.java.net/23/
 ```bash
 
 sudo apt install openjdk-21-jdk -y
