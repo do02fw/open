@@ -148,13 +148,13 @@ https://openvpn.net/community-resources/reference-manual-for-openvpn-2-6
 Ubuntu24
 ```bash
 
-mkdir -p /etc/apt/keyrings && apt-get install gpg && sudo curl -fsSL https://swupdate.openvpn.net/repos/repo-public.gpg | gpg --dearmor > /etc/apt/keyrings/openvpn-repo-public.gpg && echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/release/2.6 mantic main" > /etc/apt/sources.list.d/openvpn-aptrepo.list && sudo chmod 777 openvpn-install.sh && sudo bash openvpn-install.sh
+sudo curl https://raw.githubusercontent.com/do02fw/open/main/openvpn-install.sh && mkdir -p /etc/apt/keyrings && apt-get install gpg && sudo curl -fsSL https://swupdate.openvpn.net/repos/repo-public.gpg | gpg --dearmor > /etc/apt/keyrings/openvpn-repo-public.gpg && echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/release/2.6 mantic main" > /etc/apt/sources.list.d/openvpn-aptrepo.list && sudo chmod 777 openvpn-install.sh && sudo bash openvpn-install.sh
 
 ```
 Debian测试版
 ```bash
 
-mkdir -p /etc/apt/keyrings && apt-get install gpg && sudo curl -fsSL https://swupdate.openvpn.net/repos/repo-public.gpg | gpg --dearmor > /etc/apt/keyrings/openvpn-repo-public.gpg && echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/release/2.6 bookworm main" > /etc/apt/sources.list.d/openvpn-aptrepo.list && sudo chmod 777 openvpn-install.sh && sudo bash openvpn-install.sh
+sudo curl https://raw.githubusercontent.com/do02fw/open/main/openvpn-install.sh && mkdir -p /etc/apt/keyrings && apt-get install gpg && sudo curl -fsSL https://swupdate.openvpn.net/repos/repo-public.gpg | gpg --dearmor > /etc/apt/keyrings/openvpn-repo-public.gpg && echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/release/2.6 bookworm main" > /etc/apt/sources.list.d/openvpn-aptrepo.list && sudo chmod 777 openvpn-install.sh && sudo bash openvpn-install.sh
 
 ```
 选UDP 端口65535 DNS选1.1.1.1          
@@ -164,7 +164,7 @@ mkdir -p /etc/apt/keyrings && apt-get install gpg && sudo curl -fsSL https://swu
 sed -i 's/1.0.0.1/2606:4700:4700::1111/g' /etc/openvpn/server/server.conf && echo '--data-ciphers AES-256-GCM' >> /etc/openvpn/server/server.conf && echo 'duplicate-cn' >> /etc/openvpn/server/server.conf
 
 ```
-dns改为8.8.4.4
+DNS改为8.8.4.4
 # 服务器没有IPV6的话需要禁用IPv6流量
 ```bash
 
