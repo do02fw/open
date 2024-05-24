@@ -165,6 +165,7 @@ sed -i 's/1.0.0.1/2606:4700:4700::1111/g' /etc/openvpn/server/server.conf && ech
 
 ```
 DNS改为8.8.4.4
+2001:4860:4860::8888
 # 服务器没有IPV6的话需要禁用IPv6流量
 ```bash
 
