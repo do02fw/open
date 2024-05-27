@@ -13,24 +13,6 @@ sed -i 's/bookworm/trixie/g' /etc/apt/sources.list && sudo apt update && sudo ap
 ```bash
 apt autoremove -y && sudo reboot
 ```
-Debian12更新内核
-查找内核
-```bash
-apt-cache search linux-image
-```
-搜不到内核的话添加源
-```bash
-echo "deb http://deb.debian.org/debian bookworm-backports main" | sudo tee -a /etc/apt/sources.list
-```
-复制名字包含cloud amd64的内核名称
-```bash
-sudo apt install 内核名称
-```
-```bash
-
-sudo apt autoremove -y && sudo reboot
-
-```
 Ubuntu LTS版更新系统
 ```bash
 
@@ -197,7 +179,7 @@ JDK下载
 https://jdk.java.net/23/
 ```bash
 
-sudo apt install openjdk-21-jdk -y
+sudo apt install openjdk-22-jdk -y
 
 ```
 ```bash
