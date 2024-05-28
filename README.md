@@ -1,5 +1,6 @@
+```bash
 python3 start.py ICMP 127.0.0.1 60 360
-
+```
 # 系统更新
 Debian12更新系统和内核
 ```bash
@@ -77,10 +78,6 @@ https://gitlab.com/openconnect/openconnect-gui/-/releases
 
 https://www.apkmirror.com/apk/cisco-systems-inc/anyconnect
 
-每日构建版
-
-https://gitlab.com/openconnect/openconnect-gui/-/pipelines
-
 # Gemini搭建教程和环境变量
 安全等级修改/app/client/platforms/google.ts里面的BLOCK_ONLY_HIGH改成BLOCK_NONE
 
@@ -108,12 +105,10 @@ https://vercel.com/
 
 https://github.com/do02fw/ChatGPT-Next-Web/blob/main/README_CN.md
 ```bash
-
 CUSTOM_MODELS -all,+gemini-1.5-flash-latest
 DISABLE_FAST_LINK 1
 HIDE_USER_API_KEY 1
 GOOGLE_API_KEY 密钥
-
 ```
 # openvpn官方文档
 https://openvpn.net/community-resources/reference-manual-for-openvpn-2-6
@@ -159,17 +154,11 @@ https://www.apkmirror.com/apk/openvpn/openvpn-connect/
 JDK下载
 https://jdk.java.net/23/
 ```bash
-
 sudo apt install openjdk-22-jdk -y
-
 ```
 ```bash
-
 wget https://github.com/zjns/revanced-cli/releases/download/v4.6.0.1/revanced-cli.jar && wget https://github.com/BiliRoamingX/BiliRoamingX/releases/download/v1.20.3/BiliRoamingX-integrations.apk && wget https://github.com/BiliRoamingX/BiliRoamingX/releases/download/v1.20.3/BiliRoamingX-patches.jar && wget https://dl.hdslb.com/mobile/latest/android64/iBiliPlayer-bili.apk
-
 ```
 ```bash
-
 java -jar revanced-cli.jar patch --merge BiliRoamingX-integrations.apk --patch-bundle BiliRoamingX-patches.jar --signing-levels 2,3 iBiliPlayer-bili.apk
-
 ```
