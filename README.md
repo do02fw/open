@@ -62,10 +62,10 @@ Ubuntu如果依赖包更新失败强制更新
 sudo apt install aptitude -y && sudo aptitude full-upgrade -y
 
 ```
-Ubuntu修改为官方源
+Ubuntu官方源
 ```bash
 
-archive.ubuntu.com
+https://archive.ubuntu.com
 
 ```
 Ubuntu24.04添加源签名
