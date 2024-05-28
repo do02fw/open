@@ -101,9 +101,16 @@ sudo iptables -t nat -A POSTROUTING -j MASQUERADE && sudo iptables-save > /etc/i
 ```
 客户端下载
 
-https://www.catpaws2011.com/docs/?p=420 或者 https://gitlab.com/openconnect/openconnect-gui/-/releases
+https://www.catpaws2011.com/docs/?p=420
+
+https://gitlab.com/openconnect/openconnect-gui/-/releases
 
 https://www.apkmirror.com/apk/cisco-systems-inc/anyconnect
+
+每日构建版
+
+https://gitlab.com/openconnect/openconnect-gui/-/pipelines
+
 # Gemini搭建教程和环境变量
 安全等级修改/app/client/platforms/google.ts里面的BLOCK_ONLY_HIGH改成BLOCK_NONE
 
