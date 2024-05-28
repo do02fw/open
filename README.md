@@ -68,6 +68,12 @@ Ubuntu修改为官方源
 archive.ubuntu.com
 
 ```
+Ubuntu24.04添加源签名
+```bash
+
+Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
+
+```
 # ocserv配置教程
 安装
 ```bash
