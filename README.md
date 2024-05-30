@@ -49,7 +49,7 @@ sudo apt install aptitude -y && sudo aptitude full-upgrade -y
 ```
 Ubuntu官方源
 ```bash
-https://archive.ubuntu.com
+http://archive.ubuntu.com
 ```
 Ubuntu24.04添加源签名
 ```bash
@@ -86,17 +86,11 @@ https://github.com/do02fw/ChatGPT-Next-Web/blob/main/app/masks/cn.ts
 
 https://github.com/do02fw/ChatGPT-Next-Web/blob/main/app/masks/en.ts
 
-搭建和更新教程
+搭建和更新教程 https://github.com/do02fw/ChatGPT-Next-Web/blob/main/docs/vercel-cn.md#%E5%A6%82%E4%BD%95%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AE
 
-https://github.com/do02fw/ChatGPT-Next-Web/blob/main/docs/vercel-cn.md#%E5%A6%82%E4%BD%95%E6%96%B0%E5%BB%BA%E9%A1%B9%E7%9B%AE
+Vercel https://vercel.com/
 
-Vercel
-
-https://vercel.com/
-
-环境变量 
-
-https://github.com/do02fw/ChatGPT-Next-Web/blob/main/README_CN.md
+环境变量 https://github.com/do02fw/ChatGPT-Next-Web/blob/main/README_CN.md
 ```bash
 CUSTOM_MODELS -all,+gemini-1.5-flash-latest
 DISABLE_FAST_LINK 1
