@@ -24,7 +24,7 @@ sudo apt install ubuntu-release-upgrader-core -y && sudo apt update && sudo apt 
 apt autoremove -y && sudo reboot
 ```
 ```bash
-sudo apt update && sudo do-release-upgrade -y
+sudo apt update && sudo do-release-upgrade
 ```
 ```bash
 apt autoremove -y && sudo reboot
@@ -37,7 +37,7 @@ sudo sed -i 's/Prompt=lts/Prompt=normal/g' /etc/update-manager/release-upgrades 
 apt autoremove -y && sudo reboot
 ```
 ```bash
-sudo apt update && sudo do-release-upgrade -y
+sudo apt update && sudo do-release-upgrade
 ```
 ```bash
 apt autoremove -y && sudo reboot
