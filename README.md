@@ -143,6 +143,10 @@ https://openvpn.net/client/client-connect-vpn-for-windows/
 
 https://www.apkmirror.com/apk/openvpn/openvpn-connect/
 
+# 安装openvpn-dco模块
+```bash
+apt install openvpn-dco-dkms
+```
 # 编译哔哩哔哩
 JDK下载
 https://jdk.java.net/23/
