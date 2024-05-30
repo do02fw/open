@@ -74,7 +74,7 @@ https://www.apkmirror.com/apk/cisco-systems-inc/anyconnect
 # Gemini搭建教程和环境变量
 安全等级修改/app/client/platforms/google.ts里面的BLOCK_ONLY_HIGH改成BLOCK_NONE
 
-参考https://github.com/do02fw/ChatGPT-Next-Web/blob/main/app/client/platforms/google.ts
+参考 https://github.com/do02fw/ChatGPT-Next-Web/blob/main/app/client/platforms/google.ts
 
 修改面具中的prompt删除多余的面具/app/masks/cn.ts和/app/masks/en.ts
 
