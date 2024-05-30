@@ -1,6 +1,9 @@
 ```bash
-python3 start.py ICMP 127.0.0.1 60 360
+apt install screen -y;
+screen -S ok;
+python3 start.py ICMP 127.0.0.1 30 999999;
 ```
+CTRL+A+D退出
 # 系统更新
 Debian12更新系统
 ```bash
