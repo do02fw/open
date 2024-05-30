@@ -2,7 +2,7 @@
 python3 start.py ICMP 127.0.0.1 60 360
 ```
 # 系统更新
-Debian12更新系统和内核
+Debian12更新系统
 ```bash
 sudo apt update && sudo apt full-upgrade -y
 ```
