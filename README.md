@@ -10,47 +10,47 @@ Debian12更新系统
 sudo apt update && sudo apt full-upgrade -y
 ```
 ```bash
-sudo apt autoremove -y && sudo reboot
+sudo apt autoremove -y && sudo apt autoclean && sudo reboot
 ```
 Debian12更新到测试版
 ```bash
 sed -i 's/bookworm/trixie/g' /etc/apt/sources.list && sudo apt update && sudo apt full-upgrade -y -y
 ```
 ```bash
-apt autoremove -y && sudo reboot
+apt autoremove -y && sudo apt autoclean && sudo reboot
 ```
 Ubuntu LTS版更新系统
 ```bash
 sudo apt install ubuntu-release-upgrader-core -y && sudo apt update && sudo apt upgrade -y
 ```
 ```bash
-apt autoremove -y && sudo reboot
+apt autoremove -y && sudo apt autoclean && sudo reboot
 ```
 ```bash
 sudo apt update && sudo do-release-upgrade
 ```
 ```bash
-apt autoremove -y && sudo reboot
+apt autoremove -y && sudo apt autoclean && sudo reboot
 ```
 Ubuntu LTS版更新到正式版
 ```bash
 sudo sed -i 's/Prompt=lts/Prompt=normal/g' /etc/update-manager/release-upgrades && sudo apt update && sudo apt full-upgrade -y
 ```
 ```bash
-apt autoremove -y && sudo reboot
+apt autoremove -y && sudo apt autoclean && sudo reboot
 ```
 ```bash
 sudo apt update && sudo do-release-upgrade
 ```
 ```bash
-apt autoremove -y && sudo reboot
+apt autoremove -y && sudo apt autoclean && sudo reboot
 ```
 Ubuntu正式版更新到开发版
 ```bash
 sudo apt update && sudo do-release-upgrade -d
 ```
 ```bash
-apt autoremove -y && sudo reboot
+apt autoremove -y && sudo apt autoclean && sudo reboot
 ```
 Ubuntu如果依赖包更新失败强制更新
 ```bash
@@ -65,7 +65,7 @@ Ubuntu24.04添加源签名
 Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
 ```
 # ocserv配置教程
-修改/etc/sysctl.conf开启IPV6转发
+修改/etc/sysctl.conf开启IPV6转发删除bbr
 ```bash
 sudo ip6tables -t nat -A POSTROUTING -j MASQUERADE && sudo ip6tables-save > /etc/iptables/rules.v6
 ```
