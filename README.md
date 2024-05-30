@@ -56,12 +56,6 @@ Ubuntu24.04添加源签名
 Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
 ```
 # ocserv配置教程
-安装
-```bash
-sudo chmod 777 ocserv.sh && sudo bash ocserv.sh
-```
-完成后执行或者直接替换配置文件ocserv.conf
-
 修改/etc/sysctl.conf开启IPV6转发
 ```bash
 sudo ip6tables -t nat -A POSTROUTING -j MASQUERADE && sudo ip6tables-save > /etc/iptables/rules.v6
@@ -77,7 +71,6 @@ https://www.catpaws2011.com/docs/?p=420
 https://gitlab.com/openconnect/openconnect-gui/-/releases
 
 https://www.apkmirror.com/apk/cisco-systems-inc/anyconnect
-
 # Gemini搭建教程和环境变量
 安全等级修改/app/client/platforms/google.ts里面的BLOCK_ONLY_HIGH改成BLOCK_NONE
 
@@ -117,18 +110,16 @@ Ubuntu24
 ```bash
 mkdir -p /etc/apt/keyrings && apt-get install gpg && sudo curl -fsSL https://swupdate.openvpn.net/repos/repo-public.gpg | gpg --dearmor > /etc/apt/keyrings/openvpn-repo-public.gpg && echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/release/2.6 mantic main" > /etc/apt/sources.list.d/openvpn-aptrepo.list && wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh
 ```
-Debian测试版
+Debian12
 ```bash
 mkdir -p /etc/apt/keyrings && apt-get install gpg && sudo curl -fsSL https://swupdate.openvpn.net/repos/repo-public.gpg | gpg --dearmor > /etc/apt/keyrings/openvpn-repo-public.gpg && echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/release/2.6 bookworm main" > /etc/apt/sources.list.d/openvpn-aptrepo.list && wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh
 ```
-选UDP 端口65535 DNS选1.1.1.1          
+选UDP 端口65535 DNS选Google         
 # 安装完成后执行
 ```bash
-sed -i 's/1.0.0.1/2606:4700:4700::1111/g' /etc/openvpn/server/server.conf && echo '--data-ciphers AES-256-GCM' >> /etc/openvpn/server/server.conf && echo 'duplicate-cn' >> /etc/openvpn/server/server.conf
+sed -i 's/8.8.4.4/2001:4860:4860::8844/g' /etc/openvpn/server/server.conf && sed -i 's/8.8.8.8/8.8.4.4/g' /etc/openvpn/server/server.conf 
+&& echo '--data-ciphers AES-256-GCM' >> /etc/openvpn/server/server.conf && echo 'duplicate-cn' >> /etc/openvpn/server/server.conf
 ```
-DNS改为8.8.4.4
-
-2001:4860:4860::8844
 # 服务器没有IPV6的话需要禁用IPv6流量
 ```bash
 echo 'push "redirect-gateway ipv6 def1 bypass-dhcp"' >> /etc/openvpn/server/server.conf
