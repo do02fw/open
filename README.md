@@ -18,7 +18,10 @@ apt autoremove -y && sudo reboot
 ```
 Ubuntu LTS版更新系统
 ```bash
-sudo apt install ubuntu-release-upgrader-core -y && sudo apt update && sudo apt upgrade -y && apt autoremove -y && sudo reboot
+sudo apt install ubuntu-release-upgrader-core -y && sudo apt update && sudo apt upgrade -y
+```
+```bash
+apt autoremove -y && sudo reboot
 ```
 ```bash
 sudo apt install ubuntu-release-upgrader-core -y && sudo apt update && sudo do-release-upgrade
