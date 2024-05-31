@@ -12,13 +12,6 @@ sudo apt update && sudo apt full-upgrade -y
 ```bash
 sudo apt autoremove -y && sudo apt autoclean && sudo reboot
 ```
-Debian12更新到测试版
-```bash
-sed -i 's/bookworm/trixie/g' /etc/apt/sources.list && sudo apt update && sudo apt full-upgrade -y -y
-```
-```bash
-apt autoremove -y && sudo apt autoclean && sudo reboot
-```
 Ubuntu LTS版更新系统
 ```bash
 sudo apt install ubuntu-release-upgrader-core -y && sudo apt update && sudo apt upgrade -y
