@@ -30,10 +30,7 @@ Ubuntu LTS版更新到正式版
 sudo sed -i 's/Prompt=lts/Prompt=normal/g' /etc/update-manager/release-upgrades && sudo apt update && sudo apt full-upgrade -y
 ```
 ```bash
-apt autoremove -y && sudo apt autoclean && sudo reboot
-```
-```bash
-sudo apt update && sudo do-release-upgrade
+sudo apt autoclean && sudo apt update && sudo do-release-upgrade
 ```
 ```bash
 apt autoremove -y && sudo apt autoclean && sudo reboot
