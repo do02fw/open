@@ -58,7 +58,7 @@ sudo apt install aptitude -y && sudo aptitude full-upgrade -y
 ```
 Ubuntu官方源
 ```bash
-http://archive.ubuntu.com
+archive.ubuntu.com
 ```
 Ubuntu24.04添加源签名
 ```bash
