@@ -96,7 +96,7 @@ mkdir -p /etc/apt/keyrings && apt-get install gpg && sudo curl -fsSL https://swu
 ```bash
 sed -i 's/8.8.4.4/2001:4860:4860::8844/g' /etc/openvpn/server/server.conf; 
 sed -i 's/8.8.8.8/8.8.4.4/g' /etc/openvpn/server/server.conf; 
-echo '--data-ciphers CHACHA20-POLY1305' >>> /etc/openvpn/server/server.conf
+echo '--data-ciphers AES-256-GCM' >>> /etc/openvpn/server/server.conf
 ```
 # 服务器没有IPV6的话需要禁用IPv6流量
 ```bash
@@ -119,15 +119,26 @@ https://openvpn.net/client/client-connect-vpn-for-windows/
 
 https://www.apkmirror.com/apk/openvpn/openvpn-connect/
 
+# Wireguard安装
+```bash
+wget https://git.io/wireguard -O wireguard-install.sh && bash wireguard-install.sh
+```
+端口65535，选Google DNS
 # 编译哔哩哔哩
-JDK下载
+下载JDK并配置环境
 https://jdk.java.net/23/
-```bash
-sudo apt install openjdk-22-jdk -y
-```
-```bash
-wget https://github.com/zjns/revanced-cli/releases/download/v4.6.0.1/revanced-cli.jar && wget https://github.com/BiliRoamingX/BiliRoamingX/releases/download/v1.20.3/BiliRoamingX-integrations.apk && wget https://github.com/BiliRoamingX/BiliRoamingX/releases/download/v1.20.3/BiliRoamingX-patches.jar && wget https://dl.hdslb.com/mobile/latest/android64/iBiliPlayer-bili.apk
-```
+
+下载所需文件
+
+https://github.com/zjns/revanced-cli/releases/download/v4.6.0.1/revanced-cli.jar 
+
+https://github.com/BiliRoamingX/BiliRoamingX/releases/download/v1.20.3/BiliRoamingX-integrations.apk 
+
+https://github.com/BiliRoamingX/BiliRoamingX/releases/download/v1.20.3/BiliRoamingX-patches.jar
+
+https://dl.hdslb.com/mobile/latest/android64/iBiliPlayer-bili.apk
+
+cmd执行
 ```bash
 java -jar revanced-cli.jar patch --merge BiliRoamingX-integrations.apk --patch-bundle BiliRoamingX-patches.jar --signing-levels 2,3 iBiliPlayer-bili.apk
 ```
