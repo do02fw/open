@@ -119,11 +119,6 @@ https://openvpn.net/client/client-connect-vpn-for-windows/
 
 https://www.apkmirror.com/apk/openvpn/openvpn-connect/
 
-# Wireguard安装
-```bash
-wget https://git.io/wireguard -O wireguard-install.sh && bash wireguard-install.sh
-```
-端口65535，选Google DNS
 # 编译哔哩哔哩
 下载JDK并配置环境
 https://jdk.java.net/23/
