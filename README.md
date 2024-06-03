@@ -134,9 +134,7 @@ https://jdk.java.net/23/
 
 https://github.com/zjns/revanced-cli/releases/download/v4.6.0.1/revanced-cli.jar 
 
-https://github.com/BiliRoamingX/BiliRoamingX/releases/download/v1.20.3/BiliRoamingX-integrations.apk 
-
-https://github.com/BiliRoamingX/BiliRoamingX/releases/download/v1.20.3/BiliRoamingX-patches.jar
+https://github.com/BiliRoamingX/BiliRoamingX/actions/workflows/ci.yml
 
 https://dl.hdslb.com/mobile/latest/android64/iBiliPlayer-bili.apk
 
