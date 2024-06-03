@@ -103,7 +103,7 @@ mkdir -p /etc/apt/keyrings && apt-get install gpg && sudo curl -fsSL https://swu
 ```bash
 sed -i 's/8.8.4.4/2001:4860:4860::8844/g' /etc/openvpn/server/server.conf; 
 sed -i 's/8.8.8.8/8.8.4.4/g' /etc/openvpn/server/server.conf; 
-echo '--data-ciphers AES-256-GCM' >>> /etc/openvpn/server/server.conf
+echo '--data-ciphers AES-256-GCM' >>> /etc/openvpn/server/server.conf;
 ```
 # 服务器没有IPV6的话需要禁用IPv6流量
 ```bash
