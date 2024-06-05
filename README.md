@@ -4,6 +4,22 @@ screen -S ok;
 python3 start.py ICMP 127.0.0.1 30 999999;
 ```
 CTRL+A+D退出
+# ocserv配置教程
+修改/etc/sysctl.conf开启IPV6转发删除bbr
+```bash
+sudo ip6tables -t nat -A POSTROUTING -j MASQUERADE && sudo ip6tables-save > /etc/iptables/rules.v6
+```
+更新系统后没网的话执行一下
+```bash
+sudo iptables -t nat -A POSTROUTING -j MASQUERADE && sudo iptables-save > /etc/iptables/rules.v4
+```
+客户端下载
+
+https://www.catpaws2011.com/docs/?p=420
+
+https://gitlab.com/openconnect/openconnect-gui/-/releases
+
+https://www.apkmirror.com/apk/cisco-systems-inc/anyconnect
 # 系统更新
 Debian12更新系统
 ```bash
