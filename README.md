@@ -62,6 +62,14 @@ Ubuntu如果依赖包更新失败强制更新
 ```bash
 sudo apt install aptitude -y && sudo aptitude full-upgrade -y
 ```
+Ubuntu如果出现DNS错误执行
+```bash
+sudo apt rm -rf /etc/resolve.conf;
+sudo apt touch /etc/resolve.conf;
+```
+```bash
+写入nameserver 8.8.4.4
+```
 Ubuntu官方源
 ```bash
 archive.ubuntu.com
