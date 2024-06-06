@@ -64,11 +64,9 @@ sudo apt install aptitude -y && sudo aptitude full-upgrade -y
 ```
 Ubuntu如果出现DNS错误执行
 ```bash
-sudo apt rm -rf /etc/resolve.conf;
-sudo apt touch /etc/resolve.conf;
-```
-```bash
-写入nameserver 8.8.4.4
+sudo rm /etc/resolve.conf
+sudo touch /etc/resolve.conf
+sudo echo "nameserver 1.1.1.1" >> /etc/resolve.conf
 ```
 Ubuntu官方源
 ```bash
