@@ -137,7 +137,7 @@ local <IPv6地址>
 客户端和服务器的配置文件中的proto udp需要改为proto udp6
 # 安装openvpn dco
 ```bash
-apt install openvpn-dco-dkms
+apt install openvpn-dco-dkms -y
 ```
 https://openvpn.net/as-docs/tutorials/tutorial--turn-on-openvpn-dco.html#step-3--verify-openvpn-dco-is-now-in-use
 # 官方客户端下载
