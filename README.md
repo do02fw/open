@@ -22,6 +22,8 @@ https://gitlab.com/openconnect/openconnect-gui/-/releases
 https://www.apkmirror.com/apk/cisco-systems-inc/anyconnect
 # 系统更新
 Debian12更新系统
+
+https://www.debian.org/releases/trixie/release-notes/upgrading.zh_CN.html#prepare-a-safe-environment-for-the-upgrade
 ```bash
 sudo apt update && sudo apt full-upgrade -y
 ```
