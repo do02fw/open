@@ -48,7 +48,7 @@ sudo sed -i 's/Prompt=lts/Prompt=normal/g' /etc/update-manager/release-upgrades 
 sudo apt autoclean && sudo apt update && sudo do-release-upgrade
 ```
 ```bash
-apt autoremove -y && sudo apt autoclean && sudo reboot
+apt autoremove -y && sudo apt autoclean
 ```
 Ubuntu正式版更新到开发版
 ```bash
