@@ -4,8 +4,14 @@ screen -S ok;
 python3 start.py ICMP 127.0.0.1 30 999999;
 ```
 CTRL+A+D退出
-# ocserv配置教程
-修改/etc/sysctl.conf开启IPV6转发删除bbr
+# ocserv
+安装
+```bash
+wget https://raw.githubusercontent.com/do02fw/open/main/ocserv.sh;
+chmod 777 ocserv.sh;
+bash ocserv.sh;
+```
+修改/etc/sysctl.conf开启IPV6
 ```bash
 sudo ip6tables -t nat -A POSTROUTING -j MASQUERADE && sudo ip6tables-save > /etc/iptables/rules.v6
 ```
