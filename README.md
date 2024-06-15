@@ -132,6 +132,10 @@ echo 'duplicate-cn' >> /etc/openvpn/server/server.conf;
 ```bash
 echo 'push "redirect-gateway ipv6 def1 bypass-dhcp"' >> /etc/openvpn/server/server.conf
 ```
+改为
+```bash
+redirect-gateway def1 bypass-dhcp
+```
 # 重启openvpn服务，最好重启服务器
 ```bash
 sudo service openvpn restart
