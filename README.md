@@ -4,6 +4,7 @@ screen -S ok;
 python3 start.py ICMP 127.0.0.1 30 999999;
 ```
 sourceforge.net/projects/pynuker/
+https://sourceforge.net/projects/gns-3/
 CTRL+A+D退出
 # ocserv
 安装
