@@ -1,22 +1,25 @@
 # DDOS
 安装git
-https://git-scm.com/download/win
+git-scm.com/download/win
+
 安装环境
 ```bash
 git clone https://github.com/MatrixTM/MHDDoS.git
 cd MHDDoS
 pip install -r requirements.txt
 ```
+例子
 ```bash
 apt install screen -y;
 screen -S ok;
-python3 start.py ICMP 127.0.0.1 30 999999;
+python3 start.py ICMP 127.0.0.1 200 999999;
+python3 start.py TCP 127.0.0.1:443 200 999999;
 ```
 CTRL+A+D退出
 
 sourceforge.net/projects/pynuker/
 
-https://sourceforge.net/projects/gns-3/
+sourceforge.net/projects/gns-3/
 # 系统更新
 Debian12更新系统
 ```bash
