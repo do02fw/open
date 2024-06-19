@@ -124,7 +124,7 @@ GOOGLE_API_KEY 密钥
 ```
 # openvpn官方文档
 https://openvpn.net/community-resources/reference-manual-for-openvpn-2-6
-# 安装openvpn，安装前系统必须是最新版，服务器必须有IPV6地址
+# 安装openvpn，服务器必须有IPV6地址
 Ubuntu24
 ```bash
 mkdir -p /etc/apt/keyrings && apt-get install gpg && sudo curl -fsSL https://swupdate.openvpn.net/repos/repo-public.gpg | gpg --dearmor > /etc/apt/keyrings/openvpn-repo-public.gpg && echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/release/2.6 noble main" > /etc/apt/sources.list.d/openvpn-aptrepo.list && wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh
