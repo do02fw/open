@@ -139,15 +139,10 @@ sudo service openvpn restart
  x添加server-ipv6 fddd:1194:1194:1194::/64到server.conf
 
 修改server.conf文件push "redirect-gateway def1 bypass-dhcp"为push "redirect-gateway def1 ipv6 bypass-dhcp"
-
-添加
-
-pull-filter ignore "ifconfig-ipv6"
-
-pull-filter ignore "route-ipv6"
-
-到server.conf中
-
+```bash
+echo 'pull-filter ignore "ifconfig-ipv6"' >> /etc/openvpn/server/server.conf;
+echo 'pull-filter ignore "route-ipv6"' >> /etc/openvpn/server/server.conf;
+```
 # 使用IPV6连接
 修改配置文件vim /etc/openvpn/server/server.conf
 
