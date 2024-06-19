@@ -1,5 +1,12 @@
 # DDOS
-
+安装git
+https://git-scm.com/download/win
+安装环境
+```bash
+git clone https://github.com/MatrixTM/MHDDoS.git
+cd MHDDoS
+pip install -r requirements.txt
+```
 ```bash
 apt install screen -y;
 screen -S ok;
@@ -10,32 +17,6 @@ CTRL+A+D退出
 sourceforge.net/projects/pynuker/
 
 https://sourceforge.net/projects/gns-3/
-# ocserv
-安装
-```bash
-wget https://raw.githubusercontent.com/do02fw/open/main/ocserv.sh;
-chmod 777 ocserv.sh;
-bash ocserv.sh;
-```
-```bash
-cd /etc/ocserv;
-wget https://raw.githubusercontent.com/do02fw/open/main/ocserv.conf;
-```
-修改/etc/sysctl.conf开启IPV6
-```bash
-sudo ip6tables -t nat -A POSTROUTING -j MASQUERADE && sudo ip6tables-save > /etc/iptables/rules.v6
-```
-更新系统后没网的话执行一下
-```bash
-sudo iptables -t nat -A POSTROUTING -j MASQUERADE && sudo iptables-save > /etc/iptables/rules.v4
-```
-客户端下载
-
-https://www.catpaws2011.com/docs/?p=420
-
-https://gitlab.com/openconnect/openconnect-gui/-/releases
-
-https://www.apkmirror.com/apk/cisco-systems-inc/anyconnect
 # 系统更新
 Debian12更新系统
 ```bash
