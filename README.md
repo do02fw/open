@@ -136,9 +136,13 @@ echo 'duplicate-cn' >> /etc/openvpn/server/server.conf;
 sudo service openvpn restart
 ```
 # 禁用IPV6
-分配本地IPV6地址
+添加server-ipv6 fddd:1194:1194:1194::/64到server.conf
 
-删除server.conf文件push里的ipv6
+删除server.conf文件push "redirect-gateway def1 ipv6 bypass-dhcp"里的ipv6
+
+删除/etc/sysctl.d/99-openvpn-forward.conf中的net.ipv6.conf.all.forwarding=1
+
+删除/proc/sys/net/ipv6/conf/all/forwarding中的1
 # 使用IPV6连接
 修改配置文件vim /etc/openvpn/server/server.conf
 
