@@ -70,6 +70,29 @@ Ubuntu24.04添加源签名
 ```bash
 Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
 ```
+# ocserv
+安装
+```bash
+wget https://raw.githubusercontent.com/do02fw/open/main/ocserv.sh;
+chmod 777 ocserv.sh;
+bash ocserv.sh;
+```
+```bash
+cd /etc/ocserv;
+wget https://raw.githubusercontent.com/do02fw/open/main/ocserv.conf;
+```
+修改/etc/sysctl.conf开启IPV6
+```bash
+sudo ip6tables -t nat -A POSTROUTING -j MASQUERADE && sudo ip6tables-save > /etc/iptables/rules.v6
+```
+更新系统后没网的话执行一下
+```bash
+sudo iptables -t nat -A POSTROUTING -j MASQUERADE && sudo iptables-save > /etc/iptables/rules.v4
+```
+客户端下载
+https://www.catpaws2011.com/docs/?p=420
+https://gitlab.com/openconnect/openconnect-gui/-/releases
+https://www.apkmirror.com/apk/cisco-systems-inc/anyconnect
 # Gemini搭建教程和环境变量
 安全等级修改/app/client/platforms/google.ts里面的BLOCK_ONLY_HIGH改成BLOCK_NONE
 
@@ -118,13 +141,6 @@ echo 'duplicate-cn' >> /etc/openvpn/server/server.conf;
 # 重启openvpn服务，最好重启服务器
 ```bash
 sudo service openvpn restart
-```
-# 禁用IPV6
-修改server.conf文件push "redirect-gateway def1 bypass-dhcp"为push "redirect-gateway def1 ipv6 bypass-dhcp"
-```bash
-echo 'server-ipv6 fddd:1194:1194:1194::/64' >> /etc/openvpn/server/server.conf;
-echo 'pull-filter ignore "ifconfig-ipv6"' >> /etc/openvpn/server/server.conf;
-echo 'pull-filter ignore "route-ipv6"' >> /etc/openvpn/server/server.conf;
 ```
 # 使用IPV6连接
 修改配置文件vim /etc/openvpn/server/server.conf
