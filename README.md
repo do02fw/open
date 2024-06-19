@@ -135,6 +135,10 @@ echo 'duplicate-cn' >> /etc/openvpn/server/server.conf;
 ```bash
 sudo service openvpn restart
 ```
+# 禁用IPV6
+分配本地IPV6地址
+
+删除server.conf文件push里的ipv6
 # 使用IPV6连接
 修改配置文件vim /etc/openvpn/server/server.conf
 
