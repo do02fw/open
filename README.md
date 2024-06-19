@@ -1,6 +1,6 @@
 # DDOS
 安装git
-git-scm.com/download/win
+https://git-scm.com/download/win
 
 安装环境
 ```bash
@@ -17,9 +17,9 @@ python3 start.py TCP 127.0.0.1:443 200 999999;
 ```
 CTRL+A+D退出
 
-sourceforge.net/projects/pynuker/
+https://sourceforge.net/projects/pynuker/
 
-sourceforge.net/projects/gns-3/
+https://sourceforge.net/projects/gns-3/
 # 系统更新
 Debian12更新系统
 ```bash
