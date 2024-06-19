@@ -120,10 +120,9 @@ echo 'duplicate-cn' >> /etc/openvpn/server/server.conf;
 sudo service openvpn restart
 ```
 # 禁用IPV6
- x添加server-ipv6 fddd:1194:1194:1194::/64到server.conf
-
 修改server.conf文件push "redirect-gateway def1 bypass-dhcp"为push "redirect-gateway def1 ipv6 bypass-dhcp"
 ```bash
+echo 'server-ipv6 fddd:1194:1194:1194::/64' >> /etc/openvpn/server/server.conf;
 echo 'pull-filter ignore "ifconfig-ipv6"' >> /etc/openvpn/server/server.conf;
 echo 'pull-filter ignore "route-ipv6"' >> /etc/openvpn/server/server.conf;
 ```
