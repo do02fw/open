@@ -150,6 +150,11 @@ echo 'push "dhcp-option DNS 2001:4860:4860::8888"' >> /etc/openvpn/server/server
 echo '--data-ciphers AES-256-GCM' >> /etc/openvpn/server/server.conf;
 echo 'duplicate-cn' >> /etc/openvpn/server/server.conf;
 ```
+# 安装openvpn dco
+```bash
+apt install openvpn-dco-dkms -y
+```
+https://openvpn.net/as-docs/tutorials/tutorial--turn-on-openvpn-dco.html#step-3--verify-openvpn-dco-is-now-in-use
 # 重启openvpn服务，最好重启服务器
 ```bash
 sudo service openvpn restart
