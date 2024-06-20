@@ -145,8 +145,8 @@ mkdir -p /etc/apt/keyrings && apt-get install gpg && sudo curl -fsSL https://swu
 选UDP 端口65535 DNS选Google         
 # 安装完成后执行
 ```bash
-echo 'push "dhcp-option DNS 2001:4860:4860::8844' >> /etc/openvpn/server/server.conf;
-echo 'push "dhcp-option DNS 2001:4860:4860::8888' >> /etc/openvpn/server/server.conf;
+echo 'push "dhcp-option DNS 2001:4860:4860::8844"' >> /etc/openvpn/server/server.conf;
+echo 'push "dhcp-option DNS 2001:4860:4860::8888"' >> /etc/openvpn/server/server.conf;
 echo '--data-ciphers AES-256-GCM' >> /etc/openvpn/server/server.conf;
 echo 'duplicate-cn' >> /etc/openvpn/server/server.conf;
 ```
