@@ -32,7 +32,10 @@ sudo apt autoremove -y && sudo apt autoclean && sudo reboot
 ```bash
 sudo sed -i '/^deb/d' /etc/apt/sources.list
 sudo echo 'deb https://deb.debian.org/debian trixie main contrib' >> /etc/apt/sources.list
-sudo apt update
+sudo apt update && sudo apt full-upgrade -y
+```
+```bash
+sudo apt autoremove -y && sudo apt autoclean && sudo reboot
 ```
 Ubuntu LTS版更新系统
 ```bash
