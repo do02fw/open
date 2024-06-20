@@ -28,6 +28,12 @@ sudo apt update && sudo apt full-upgrade -y
 ```bash
 sudo apt autoremove -y && sudo apt autoclean && sudo reboot
 ```
+更新到Debian13
+```bash
+sudo sed -i '/^deb/d' /etc/apt/sources.list
+sudo echo 'deb https://deb.debian.org/debian trixie main contrib' >> /etc/apt/sources.list
+sudo apt update
+```
 Ubuntu LTS版更新系统
 ```bash
 sudo apt install ubuntu-release-upgrader-core -y && sudo apt update && sudo apt upgrade -y
