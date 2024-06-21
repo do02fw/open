@@ -171,6 +171,8 @@ https://openvpn.net/client/client-connect-vpn-for-windows/
 
 https://www.apkmirror.com/apk/openvpn/openvpn-connect/
 # 编译哔哩哔哩
+https://github.com/BiliRoamingX/BiliRoamingX
+
 下载JDK并配置环境
 https://jdk.java.net/23/
 
