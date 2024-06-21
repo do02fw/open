@@ -12,8 +12,10 @@ pip install -r requirements.txt
 ```bash
 apt install screen -y;
 screen -S ok;
-python3 start.py ICMP 127.0.0.1 200 999999;
-python3 start.py TCP 127.0.0.1:443 200 999999;
+python start.py TCP 127.0.0.1:80 130 100000
+python start.py TCP 127.0.0.1:80 130 100000
+python start.py STRESS http://127.0.0.1:80 1 10000 proxy.txt 130 100000
+python start.py POST http://127.0.0.1:80 1 10000 proxy.txt 130 100000
 ```
 CTRL+A+D退出
 
