@@ -14,8 +14,8 @@ apt install screen -y;
 screen -S ok;
 python start.py TCP 127.0.0.1:80 130 100000
 python start.py TCP 127.0.0.1:80 130 100000
-python start.py STRESS http://127.0.0.1:80 1 10000 proxy.txt 130 100000
-python start.py GET http://127.0.0.1:80 1 200 proxy.txt 1400 100000
+python start.py STRESS http://127.0.0.1/ 1 500 proxy.txt 130 100000
+python start.py GET http://127.0.0.1/ 1 500 proxy.txt 1500 100000
 ```
 CTRL+A+D退出
 
