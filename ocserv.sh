@@ -353,22 +353,6 @@ else
 fi
 }
 install_and_configure_ocserv_without_lets_encrypt() {
-rm -rf /etc/resolv.conf
-echo "nameserver 8.8.8.8
-nameserver 8.8.4.4" > /etc/resolv.conf
-apt-get update
-sed -i -e 's@#net.ipv4.ip_forward=1@net.ipv4.ip_forward=1@g' /etc/sysctl.conf
-sysctl -p /etc/sysctl.conf
-echo "net.ipv4.ip_forward = 1" | sudo tee /etc/sysctl.d/60-custom.conf
-echo "net.core.default_qdisc=fq" | sudo tee -a /etc/sysctl.d/60-custom.conf
-echo "net.ipv4.tcp_congestion_control=bbr" | sudo tee -a /etc/sysctl.d/60-custom.conf
-sysctl net.ipv4.tcp_available_congestion_control
-sysctl net.ipv4.tcp_congestion_control
-echo "net.core.default_qdisc=fq
-net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
-sudo sysctl -p
-sysctl net.ipv4.tcp_congestion_control
-sudo sysctl -p /etc/sysctl.d/60-custom.conf
 apt install iptables -y
 apt install iptables-persistent -y
 iptables -t nat -A POSTROUTING -j MASQUERADE
