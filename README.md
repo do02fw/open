@@ -1,4 +1,7 @@
 # DDOS
+安装nmap
+https://nmap.org/download.html#windows
+
 安装git
 https://git-scm.com/download/win
 
