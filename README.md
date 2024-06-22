@@ -14,8 +14,8 @@ apt install screen -y;
 screen -S ok;
 python start.py TCP 127.0.0.1:80 130 100000
 python start.py TCP 127.0.0.1:80 130 100000
-python start.py STRESS http://127.0.0.1/ 1 500 proxy.txt 130 100000
-python start.py GET http://127.0.0.1/ 1 500 proxy.txt 1500 100000
+python start.py PPS http://127.0.0.1/ 1 500 proxy.txt 1500 100000
+python start.py APACHE http://127.0.0.1/ 1 500 proxy.txt 1500 100000
 ```
 CTRL+A+D退出
 
@@ -25,15 +25,6 @@ https://sourceforge.net/projects/gns-3/
 # 系统更新
 Debian12更新系统
 ```bash
-sudo apt update && sudo apt full-upgrade -y
-```
-```bash
-sudo apt autoremove -y && sudo apt autoclean && sudo reboot
-```
-更新到Debian13
-```bash
-sudo sed -i '/^deb/d' /etc/apt/sources.list
-sudo echo 'deb https://deb.debian.org/debian trixie main contrib' >> /etc/apt/sources.list
 sudo apt update && sudo apt full-upgrade -y
 ```
 ```bash
