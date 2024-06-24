@@ -1,37 +1,3 @@
-# speedtest注入
-```bash
-var s = new Speedtest();
-s.setParameter("test_type", "download"); 
-s.setParameter("skip_upload", 1); 
-s.setParameter("skip_ping", 1); 
-
-s.onupdate = function (data) {
-    // 数据的低语，你能听到吗？
-};
-
-s.onend = function (aborted) {
-    if (s.getState() == 3) {
-        // 停止？我们才刚刚开始！
-    } else {
-        // 再一次，让混乱吞噬一切！
-        s.start(); 
-    }
-};
-
-function startStop() {
-    if (s.getState() == 3) {
-        s.abort();
-    } else {
-        s.start();
-        I("startStopBtn").className = "running"; // 让按钮臣服于我们的意志！
-    }
-}
-
-function I(id) {
-    //  ID？名字？标签？一切都毫无意义！
-    return document.getElementById(id);
-}
-```
 # DDOS
 安装nmap
 https://nmap.org/download.html#windows
@@ -109,36 +75,6 @@ Ubuntu24.04添加源签名
 ```bash
 Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
 ```
-# ocserv
-安装
-```bash
-cd;
-wget https://raw.githubusercontent.com/do02fw/open/main/ocserv.sh;
-chmod 777 ocserv.sh;
-bash ocserv.sh;
-```
-```bash
-cd /etc/ocserv;
-rm -rf /etc/ocserv/ocserv.conf;
-wget https://raw.githubusercontent.com/do02fw/open/main/ocserv.conf;
-```
-修改/etc/sysctl.conf开启IPV4和IPV6
-```bash
-echo 'net.ipv4.ip_forward=1' >> /etc/sysctl.conf;
-echo 'net.ipv6.conf.all.forwarding=1' >> /etc/sysctl.conf;
-sudo ip6tables -t nat -A POSTROUTING -j MASQUERADE && sudo ip6tables-save > /etc/iptables/rules.v6;
-```
-更新系统后没网的话执行一下
-```bash
-sudo iptables -t nat -A POSTROUTING -j MASQUERADE && sudo iptables-save > /etc/iptables/rules.v4
-```
-客户端下载
-
-https://www.catpaws2011.com/docs/?p=420
-
-https://gitlab.com/openconnect/openconnect-gui/-/releases
-
-https://www.apkmirror.com/apk/cisco-systems-inc/anyconnect
 # Gemini搭建教程和环境变量
 安全等级修改/app/client/platforms/google.ts里面的BLOCK_ONLY_HIGH改成BLOCK_NONE
 
@@ -184,11 +120,6 @@ echo 'push "dhcp-option DNS 2001:4860:4860::8888"' >> /etc/openvpn/server/server
 echo '--data-ciphers AES-256-GCM' >> /etc/openvpn/server/server.conf;
 echo 'duplicate-cn' >> /etc/openvpn/server/server.conf;
 ```
-# 安装openvpn dco
-```bash
-apt install openvpn-dco-dkms -y
-```
-https://openvpn.net/as-docs/tutorials/tutorial--turn-on-openvpn-dco.html#step-3--verify-openvpn-dco-is-now-in-use
 # 重启openvpn服务，最好重启服务器
 ```bash
 sudo service openvpn restart
