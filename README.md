@@ -87,7 +87,7 @@ cd /etc/ocserv;
 rm -rf /etc/ocserv/ocserv.conf;
 wget https://raw.githubusercontent.com/do02fw/open/main/ocserv.conf;
 ```
-修改/etc/sysctl.conf开启IPV6
+修改/etc/sysctl.conf开启IPV4和IPV6
 ```bash
 sudo ip6tables -t nat -A POSTROUTING -j MASQUERADE && sudo ip6tables-save > /etc/iptables/rules.v6
 ```
