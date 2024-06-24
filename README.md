@@ -78,6 +78,7 @@ Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
 # ocserv
 安装
 ```bash
+cd;
 wget https://raw.githubusercontent.com/do02fw/open/main/ocserv.sh;
 chmod 777 ocserv.sh;
 bash ocserv.sh;
