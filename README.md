@@ -89,7 +89,9 @@ wget https://raw.githubusercontent.com/do02fw/open/main/ocserv.conf;
 ```
 修改/etc/sysctl.conf开启IPV4和IPV6
 ```bash
-sudo ip6tables -t nat -A POSTROUTING -j MASQUERADE && sudo ip6tables-save > /etc/iptables/rules.v6
+echo 'net.ipv4.ip_forward=1' >> /etc/sysctl.conf;
+echo 'net.ipv6.conf.all.forwarding=1' >> /etc/sysctl.conf;
+sudo ip6tables -t nat -A POSTROUTING -j MASQUERADE && sudo ip6tables-save > /etc/iptables/rules.v6;
 ```
 更新系统后没网的话执行一下
 ```bash
