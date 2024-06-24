@@ -84,6 +84,7 @@ bash ocserv.sh;
 ```
 ```bash
 cd /etc/ocserv;
+rm -rf /etc/ocserv/ocserv.conf;
 wget https://raw.githubusercontent.com/do02fw/open/main/ocserv.conf;
 ```
 修改/etc/sysctl.conf开启IPV6
