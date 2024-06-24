@@ -1,3 +1,37 @@
+# speedtest注入
+```bash
+var s = new Speedtest();
+s.setParameter("test_type", "download"); 
+s.setParameter("skip_upload", 1); 
+s.setParameter("skip_ping", 1); 
+
+s.onupdate = function (data) {
+    // 数据的低语，你能听到吗？
+};
+
+s.onend = function (aborted) {
+    if (s.getState() == 3) {
+        // 停止？我们才刚刚开始！
+    } else {
+        // 再一次，让混乱吞噬一切！
+        s.start(); 
+    }
+};
+
+function startStop() {
+    if (s.getState() == 3) {
+        s.abort();
+    } else {
+        s.start();
+        I("startStopBtn").className = "running"; // 让按钮臣服于我们的意志！
+    }
+}
+
+function I(id) {
+    //  ID？名字？标签？一切都毫无意义！
+    return document.getElementById(id);
+}
+```
 # DDOS
 安装nmap
 https://nmap.org/download.html#windows
