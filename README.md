@@ -89,7 +89,7 @@ GOOGLE_API_KEY 密钥
 ```
 # openvpn官方文档
 https://openvpn.net/community-resources/reference-manual-for-openvpn-2-6
-# 安装openvpn，服务器必须有IPV6地址
+# 安装openvpn
 Ubuntu24
 ```bash
 mkdir -p /etc/apt/keyrings && apt-get install gpg && sudo curl -fsSL https://swupdate.openvpn.net/repos/repo-public.gpg | gpg --dearmor > /etc/apt/keyrings/openvpn-repo-public.gpg && echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/release/2.6 noble main" > /etc/apt/sources.list.d/openvpn-aptrepo.list && wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh
@@ -105,6 +105,25 @@ echo 'push "dhcp-option DNS 2001:4860:4860::8844"' >> /etc/openvpn/server/server
 echo 'push "dhcp-option DNS 2001:4860:4860::8888"' >> /etc/openvpn/server/server.conf;
 echo '--data-ciphers AES-256-GCM' >> /etc/openvpn/server/server.conf;
 echo 'duplicate-cn' >> /etc/openvpn/server/server.conf;
+```
+# 阻止IPV6流量的办法
+服务器配置文件添加
+```bash
+# 推送 IPv6 配置到客户端
+push "ifconfig-ipv6 fddd:1194:1194:1194::2/64 fddd:1194:1194:1194::1"
+# 将 IPv6 流量重定向到 VPN
+push "redirect-gateway ipv6"
+# 在服务器端阻止 IPv6 流量
+block-ipv6
+```
+客户端配置文件添加
+```bash
+# 从服务器获取 IPv6 地址和网关
+ifconfig-ipv6 fddd:1194:1194:1194::2/64 fddd:1194:1194:1194::1
+# 将 IPv6 流量重定向到 VPN
+redirect-gateway ipv6
+# 在客户端阻止 IPv6 流量
+block-ipv6 
 ```
 # 重启openvpn服务，最好重启服务器
 ```bash
