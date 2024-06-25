@@ -11,6 +11,14 @@ sudo apt update && sudo apt full-upgrade -y
 ```bash
 sudo apt autoremove -y && sudo apt autoclean && sudo reboot
 ```
+```bash
+sudo sed -i '/^deb /d' /etc/apt/sources.list  # 删除所有以 "deb " 开头的行
+sudo bash -c 'echo "deb https://deb.debian.org/debian trixie main contrib" >> /etc/apt/sources.list'  # 将新的源信息追加到文件末尾
+sudo apt update && sudo apt full-upgrade -y  # 更新软件包列表并进行升级
+```
+```bash
+sudo apt autoremove -y && sudo apt autoclean && sudo reboot
+```
 Ubuntu LTS版更新系统
 ```bash
 sudo apt install ubuntu-release-upgrader-core -y && sudo apt update && sudo apt upgrade -y
