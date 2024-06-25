@@ -118,8 +118,6 @@ block-ipv6
 ```
 客户端配置文件添加
 ```bash
-# 从服务器获取 IPv6 地址和网关
-ifconfig-ipv6 fddd:1194:1194:1194::2/64 fddd:1194:1194:1194::1
 # 将 IPv6 流量重定向到 VPN
 redirect-gateway ipv6
 # 在客户端阻止 IPv6 流量
