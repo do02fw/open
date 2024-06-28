@@ -1,3 +1,5 @@
+# 安装.NET8.0
+https://learn.microsoft.com/zh-cn/dotnet/core/install/linux-debian#debian-12
 # 端口扫描
 安装nmap
 https://nmap.org/download.html#windows
