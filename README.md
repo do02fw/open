@@ -2,7 +2,7 @@
 https://learn.microsoft.com/zh-cn/dotnet/core/install/linux-debian#debian-12
 # Linux运行控制台程序
 ```bash
-chmod +x ok.dll
+chmod 777 ok.dll
 dotnet ok.dll
 ```
 # 端口扫描
