@@ -11,6 +11,16 @@ https://nmap.org/download.html#windows
 # 网络模拟器
 https://sourceforge.net/projects/gns-3/
 # 系统更新
+Debian搜索安装内核
+```bash
+sudo apt update
+```
+```bash
+sudo apt search linux-image
+```
+```bash
+sudo apt install linux-image-amd64  # 根据您的架构选择合适的内核版本
+```
 Debian12更新系统
 ```bash
 sudo apt update && sudo apt full-upgrade -y
@@ -19,8 +29,8 @@ sudo apt update && sudo apt full-upgrade -y
 sudo apt autoremove -y && sudo apt autoclean && sudo reboot
 ```
 ```bash
-sudo sed -i '/^deb /d' /etc/apt/sources.list  # 删除所有以 "deb " 开头的行
-sudo bash -c 'echo "deb https://deb.debian.org/debian trixie main contrib" >> /etc/apt/sources.list'  # 将新的源信息追加到文件末尾
+rm -rf /etc/apt/sources.list
+sudo sh -c 'echo "deb https://deb.debian.org/debian trixie main contrib" >> /etc/apt/sources.list' 
 sudo apt update && sudo apt full-upgrade -y  # 更新软件包列表并进行升级
 ```
 ```bash
