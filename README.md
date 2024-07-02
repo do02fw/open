@@ -13,13 +13,13 @@ https://sourceforge.net/projects/gns-3/
 # 系统更新
 Debian搜索安装内核
 ```bash
-sudo apt update
-```
-```bash
 sudo apt search linux-image
 ```
 ```bash
 sudo apt install linux-image-amd64  # 根据您的架构选择合适的内核版本
+```
+```bash
+sudo apt autoremove -y && sudo apt autoclean && sudo reboot
 ```
 Debian12更新系统
 ```bash
