@@ -16,7 +16,7 @@ Debian搜索安装内核
 sudo apt search linux-image
 ```
 ```bash
-sudo apt install linux-image-amd64  # 根据您的架构选择合适的内核版本
+sudo apt install linux-image-6.8.12-cloud-amd64
 ```
 ```bash
 sudo apt autoremove -y && sudo apt autoclean && sudo reboot
