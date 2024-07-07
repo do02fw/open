@@ -129,6 +129,7 @@ redirect-gateway def1 ipv6 bypass-dhcp改为redirect-gateway def1 bypass-dhcp
 ```bash
 # 推送 IPv6 配置到客户端(如果服务器配置文件里有IPV6地址的话)
 push "ifconfig-ipv6 fddd:1194:1194:1194::2/64 fddd:1194:1194:1194::1"
+或者删除服务器配置文件里分配的IPV6地址
 ```
 ```bash
 # 将 IPv6 流量重定向到 VPN
