@@ -117,14 +117,21 @@ mkdir -p /etc/apt/keyrings && apt-get install gpg && sudo curl -fsSL https://swu
 ```
 选UDP 端口65535 DNS选Google         
 # 安装完成后执行
+包括IPV6
 ```bash
 echo 'push "dhcp-option DNS 2001:4860:4860::8844"' >> /etc/openvpn/server/server.conf;
 echo 'push "dhcp-option DNS 2001:4860:4860::8888"' >> /etc/openvpn/server/server.conf;
 echo '--data-ciphers AES-256-GCM' >> /etc/openvpn/server/server.conf;
 echo 'duplicate-cn' >> /etc/openvpn/server/server.conf;
 ```
+不包括IPV6
+```bash
+echo '--data-ciphers AES-256-GCM' >> /etc/openvpn/server/server.conf;
+echo 'duplicate-cn' >> /etc/openvpn/server/server.conf;
+```
 # 阻止IPV6流量的办法
 redirect-gateway def1 ipv6 bypass-dhcp改为redirect-gateway def1 bypass-dhcp
+
 服务器配置文件添加
 ```bash
 # 推送 IPv6 配置到客户端(如果服务器配置文件里有IPV6地址的话)
