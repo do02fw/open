@@ -124,14 +124,13 @@ echo '--data-ciphers AES-256-GCM' >> /etc/openvpn/server/server.conf;
 echo 'duplicate-cn' >> /etc/openvpn/server/server.conf;
 ```
 # 阻止IPV6流量的办法
-[失败的话添加
-server-ipv6 fddd:1194:1194:1194::/64
-
-redirect-gateway def1 bypass-dhcp改为redirect-gateway def1 ipv6 bypass-dhcp]
+redirect-gateway def1 ipv6 bypass-dhcp改为redirect-gateway def1 bypass-dhcp
 服务器配置文件添加
 ```bash
-# 推送 IPv6 配置到客户端
+# 推送 IPv6 配置到客户端(如果服务器配置文件里有IPV6地址的话)
 push "ifconfig-ipv6 fddd:1194:1194:1194::2/64 fddd:1194:1194:1194::1"
+```
+```bash
 # 将 IPv6 流量重定向到 VPN
 push "redirect-gateway ipv6"
 # 在服务器端阻止 IPv6 流量
