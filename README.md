@@ -11,27 +11,9 @@ https://nmap.org/download.html#windows
 # 网络模拟器
 https://sourceforge.net/projects/gns-3/
 # 系统更新
-Debian搜索安装内核
-```bash
-sudo apt search linux-image
-```
-```bash
-sudo apt install linux-image-6.9.7-cloud-amd64
-```
-```bash
-sudo apt autoremove -y && sudo apt autoclean && sudo reboot
-```
 Debian12更新系统
 ```bash
 sudo apt update && sudo apt full-upgrade -y
-```
-```bash
-sudo apt autoremove -y && sudo apt autoclean && sudo reboot
-```
-```bash
-rm -rf /etc/apt/sources.list
-sudo sh -c 'echo "deb https://deb.debian.org/debian trixie main contrib" >> /etc/apt/sources.list' 
-sudo apt update && sudo apt full-upgrade -y  # 更新软件包列表并进行升级
 ```
 ```bash
 sudo apt autoremove -y && sudo apt autoclean && sudo reboot
@@ -132,12 +114,9 @@ echo 'duplicate-cn' >> /etc/openvpn/server/server.conf;
 # 阻止IPV6流量的办法
 redirect-gateway def1 ipv6 bypass-dhcp改为redirect-gateway def1 bypass-dhcp
 
+删除服务器配置文件里分配的IPV6地址
+
 服务器配置文件添加
-```bash
-# 推送 IPv6 配置到客户端(如果服务器配置文件里有IPV6地址的话)
-push "ifconfig-ipv6 fddd:1194:1194:1194::2/64 fddd:1194:1194:1194::1"
-或者删除服务器配置文件里分配的IPV6地址
-```
 ```bash
 # 将 IPv6 流量重定向到 VPN
 push "redirect-gateway ipv6"
