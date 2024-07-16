@@ -79,6 +79,10 @@ https://github.com/do02fw/ChatGPT-Next-Web/blob/main/app/masks/en.ts
 
 Vercel https://vercel.com/
 
+模型版本
+
+https://ai.google.dev/gemini-api/docs/models/gemini?hl=zh-cn#gemini-1.5-flash
+
 环境变量 https://github.com/do02fw/ChatGPT-Next-Web/blob/main/README_CN.md
 ```bash
 CUSTOM_MODELS -all,+gemini-1.5-flash-latest
