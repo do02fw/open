@@ -11,9 +11,42 @@ https://nmap.org/download.html#windows
 # 网络模拟器
 https://sourceforge.net/projects/gns-3/
 # 系统更新
+Debian搜索安装内核
+```bash
+sudo apt search linux-image
+```
+```bash
+sudo apt install linux-image-6.9.9-cloud-amd64
+```
+```bash
+sudo apt autoremove -y && sudo apt autoclean && sudo reboot
+```
+Debian11更新到12
+```bash
+sudo apt update && sudo apt full-upgrade -y
+```
+```bash
+sudo apt autoremove -y && sudo apt autoclean && sudo reboot
+```
+```bash
+rm -rf /etc/apt/sources.list
+sudo sh -c 'echo "deb https://deb.debian.org/debian bookworm main contrib" >> /etc/apt/sources.list' 
+sudo apt update && sudo apt full-upgrade -y  # 更新软件包列表并进行升级
+```
+```bash
+sudo apt autoremove -y && sudo apt autoclean && sudo reboot
+```
 Debian12更新系统
 ```bash
 sudo apt update && sudo apt full-upgrade -y
+```
+```bash
+sudo apt autoremove -y && sudo apt autoclean && sudo reboot
+```
+```bash
+rm -rf /etc/apt/sources.list
+sudo sh -c 'echo "deb https://deb.debian.org/debian trixie main contrib" >> /etc/apt/sources.list' 
+sudo apt update && sudo apt full-upgrade -y  # 更新软件包列表并进行升级
 ```
 ```bash
 sudo apt autoremove -y && sudo apt autoclean && sudo reboot
@@ -29,6 +62,13 @@ Ubuntu LTS版更新到正式版
 ```bash
 sudo sed -i 's/Prompt=lts/Prompt=normal/g' /etc/update-manager/release-upgrades && sudo apt update && sudo apt full-upgrade -y
 ```
+```bash
+sudo apt autoclean && sudo apt update && sudo do-release-upgrade
+```
+```bash
+apt autoremove -y && sudo apt autoclean
+```
+Ubuntu正式版更新到最新LTS版本
 ```bash
 sudo apt autoclean && sudo apt update && sudo do-release-upgrade
 ```
