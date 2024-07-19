@@ -21,21 +21,6 @@ sudo apt install linux-image-6.9.9-cloud-amd64
 ```bash
 sudo apt autoremove -y && sudo apt autoclean && sudo reboot
 ```
-Debian11更新到12
-```bash
-sudo apt update && sudo apt full-upgrade -y
-```
-```bash
-sudo apt autoremove -y && sudo apt autoclean && sudo reboot
-```
-```bash
-rm -rf /etc/apt/sources.list
-sudo sh -c 'echo "deb https://deb.debian.org/debian bookworm main contrib" >> /etc/apt/sources.list' 
-sudo apt update && sudo apt full-upgrade -y  # 更新软件包列表并进行升级
-```
-```bash
-sudo apt autoremove -y && sudo apt autoclean && sudo reboot
-```
 Debian12更新系统
 ```bash
 sudo apt update && sudo apt full-upgrade -y
