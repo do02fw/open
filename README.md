@@ -1,3 +1,18 @@
+# 阿里云卸载监控
+以root用户登录云监控插件所在主机。
+
+执行以下命令，停止云监控插件。
+```bash
+bash /usr/local/cloudmonitor/cloudmonitorCtl.sh stop
+```
+执行以下命令，卸载云监控插件。
+```bash
+bash /usr/local/cloudmonitor/cloudmonitorCtl.sh uninstall
+```
+执行以下命令，删除目录cloudmonitor。
+```bash
+rm -rf /usr/local/cloudmonitor
+```
 # 安装.NET8.0
 https://learn.microsoft.com/zh-cn/dotnet/core/install/linux-debian#debian-12
 # Linux运行控制台程序
