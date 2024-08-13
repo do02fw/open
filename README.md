@@ -176,10 +176,6 @@ redirect-gateway ipv6
 # 在客户端阻止 IPv6 流量
 block-ipv6 
 ```
-# 安装DCO
-```bash
-apt install openvpn-dco-dkms -y
-```
 # 重启openvpn服务，最好重启服务器
 ```bash
 sudo service openvpn restart
