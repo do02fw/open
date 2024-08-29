@@ -142,12 +142,10 @@ mkdir -p /etc/apt/keyrings && apt-get install gpg && sudo curl -fsSL https://swu
 ```bash
 echo 'push "dhcp-option DNS 2001:4860:4860::8844"' >> /etc/openvpn/server/server.conf;
 echo 'push "dhcp-option DNS 2001:4860:4860::8888"' >> /etc/openvpn/server/server.conf;
-echo '--data-ciphers AES-256-GCM' >> /etc/openvpn/server/server.conf;
 echo 'duplicate-cn' >> /etc/openvpn/server/server.conf;
 ```
 不包括IPV6
 ```bash
-echo '--data-ciphers AES-256-GCM' >> /etc/openvpn/server/server.conf;
 echo 'duplicate-cn' >> /etc/openvpn/server/server.conf;
 ```
 # 阻止IPV6流量的办法
