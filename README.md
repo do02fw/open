@@ -68,13 +68,6 @@ sudo apt autoclean && sudo apt update && sudo do-release-upgrade
 ```bash
 apt autoremove -y && sudo apt autoclean
 ```
-Ubuntu正式版更新到最新LTS版本
-```bash
-sudo apt autoclean && sudo apt update && sudo do-release-upgrade
-```
-```bash
-apt autoremove -y && sudo apt autoclean
-```
 Ubuntu如果依赖包更新失败强制更新
 ```bash
 sudo apt install aptitude -y && sudo aptitude full-upgrade -y
@@ -89,7 +82,7 @@ Ubuntu官方源
 ```bash
 archive.ubuntu.com
 ```
-Ubuntu24.04添加源签名
+Ubuntu添加源签名
 ```bash
 Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
 ```
