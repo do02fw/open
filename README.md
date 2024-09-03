@@ -26,16 +26,6 @@ https://nmap.org/download.html#windows
 # 网络模拟器
 https://sourceforge.net/projects/gns-3/
 # 系统更新
-Debian搜索安装内核
-```bash
-sudo apt search linux-image
-```
-```bash
-sudo apt install linux-image-6.9.9-cloud-amd64
-```
-```bash
-sudo apt autoremove -y && sudo apt autoclean && sudo reboot
-```
 Debian12更新系统
 ```bash
 sudo apt update && sudo apt full-upgrade -y
