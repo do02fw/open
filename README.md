@@ -108,29 +108,6 @@ DISABLE_FAST_LINK 1
 HIDE_USER_API_KEY 1
 GOOGLE_API_KEY 密钥
 ```
-# ocserv
-安装
-```bash
-cd /etc/ocserv
-rm -rf /etc/ocserv/ocserv.conf
-wget https://raw.githubusercontent.com/do02fw/open/main/ocserv.conf
-```
-修改/etc/sysctl.conf开启IPV4和IPV6
-```bash
-echo 'net.ipv6.conf.all.forwarding=1' >> /etc/sysctl.conf;
-sudo ip6tables -t nat -A POSTROUTING -j MASQUERADE && sudo ip6tables-save > /etc/iptables/rules.v6;
-```
-修改/etc/sysctl.d/60-custom.conf删除bbr
-更新系统后没网的话执行一下
-```bash
-sudo iptables -t nat -A POSTROUTING -j MASQUERADE && sudo iptables-save > /etc/iptables/rules.v4
-```
-客户端下载
-https://www.catpaws2011.com/docs/?p=420
-
-https://gitlab.com/openconnect/openconnect-gui/-/releases
-
-https://www.apkmirror.com/apk/cisco-systems-inc/anyconnect
 # openvpn官方文档
 https://openvpn.net/community-resources/reference-manual-for-openvpn-2-6
 # 安装openvpn
@@ -142,7 +119,7 @@ Debian12
 ```bash
 mkdir -p /etc/apt/keyrings && apt-get install gpg && sudo curl -fsSL https://swupdate.openvpn.net/repos/repo-public.gpg | gpg --dearmor > /etc/apt/keyrings/openvpn-repo-public.gpg && echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/release/2.6 bookworm main" > /etc/apt/sources.list.d/openvpn-aptrepo.list && wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh
 ```
-选TCP 端口65535 DNS选Google         
+选UDP端口65535DNS选1.1.1.1         
 # 安装完成后执行
 包括IPV6
 ```bash
