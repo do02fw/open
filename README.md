@@ -9,6 +9,10 @@ sudo apt upgrade
 sudo apt full-upgrade
 
 sudo reboot
+
+检查系统版本
+
+cat /etc/debian_version
 # 阿里云卸载监控
 以root用户登录云监控插件所在主机。
 
