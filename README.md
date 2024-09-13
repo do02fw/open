@@ -1,3 +1,14 @@
+升级到Debian 12：
+修改 /etc/apt/sources.list 文件，将所有 bullseye 替换为 bookworm。
+更新软件包列表并进行升级：
+
+sudo apt update
+
+sudo apt upgrade
+
+sudo apt full-upgrade
+
+sudo reboot
 # 阿里云卸载监控
 以root用户登录云监控插件所在主机。
 
