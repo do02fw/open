@@ -142,8 +142,8 @@ apt install openvpn-dco-dkms
 # 安装完成后执行
 包括IPV6
 ```bash
-echo 'push "dhcp-option DNS 2001:4860:4860::8844"' >> /etc/openvpn/server/server.conf;
-echo 'push "dhcp-option DNS 2001:4860:4860::8888"' >> /etc/openvpn/server/server.conf;
+echo 'push "dhcp-option DNS 2606:4700:4700::1111"' >> /etc/openvpn/server/server.conf;
+echo 'push "dhcp-option DNS 2606:4700:4700::1001"' >> /etc/openvpn/server/server.conf;
 echo 'duplicate-cn' >> /etc/openvpn/server/server.conf;
 ```
 不包括IPV6
