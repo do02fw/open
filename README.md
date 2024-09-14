@@ -46,7 +46,7 @@ Debian搜索安装内核
 sudo apt search linux-image
 ```
 ```bash
-sudo apt install linux-image-6.10.6-cloud-amd64
+sudo apt install linux-image-6.10.9-cloud-amd64
 ```
 ```bash
 sudo apt autoremove -y && sudo apt autoclean && sudo reboot
