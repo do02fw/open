@@ -66,41 +66,6 @@ sudo apt update && sudo apt full-upgrade -y  # 更新软件包列表并进行升
 ```bash
 sudo apt autoremove -y && sudo apt autoclean && sudo reboot
 ```
-Ubuntu LTS版更新系统
-```bash
-sudo apt install ubuntu-release-upgrader-core -y && sudo apt update && sudo apt upgrade -y
-```
-```bash
-apt autoremove -y && sudo apt autoclean && sudo reboot
-```
-Ubuntu LTS版更新到正式版
-```bash
-sudo sed -i 's/Prompt=lts/Prompt=normal/g' /etc/update-manager/release-upgrades && sudo apt update && sudo apt full-upgrade -y
-```
-```bash
-sudo apt autoclean && sudo apt update && sudo do-release-upgrade
-```
-```bash
-apt autoremove -y && sudo apt autoclean
-```
-Ubuntu如果依赖包更新失败强制更新
-```bash
-sudo apt install aptitude -y && sudo aptitude full-upgrade -y
-```
-Ubuntu如果出现DNS错误执行
-```bash
-sudo rm -rf /etc/resolv.conf;
-sudo touch /etc/resolv.conf;
-sudo echo "nameserver 1.1.1.1" >> /etc/resolv.conf;
-```
-Ubuntu官方源
-```bash
-archive.ubuntu.com
-```
-Ubuntu添加源签名
-```bash
-Signed-By: /usr/share/keyrings/ubuntu-archive-keyring.gpg
-```
 # Gemini搭建教程和环境变量
 安全等级修改/app/client/platforms/google.ts里面的BLOCK_ONLY_HIGH改成BLOCK_NONE
 
@@ -144,7 +109,7 @@ Debian12
 ```bash
 mkdir -p /etc/apt/keyrings && apt-get install gpg && sudo curl -fsSL https://swupdate.openvpn.net/repos/repo-public.gpg | gpg --dearmor > /etc/apt/keyrings/openvpn-repo-public.gpg && echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/openvpn-repo-public.gpg] http://build.openvpn.net/debian/openvpn/release/2.6 bookworm main" > /etc/apt/sources.list.d/openvpn-aptrepo.list && wget https://git.io/vpn -O openvpn-install.sh && bash openvpn-install.sh
 ```
-选UDP端口65535DNS选1.1.1.1   
+选UDP端口65535 DNS选1.1.1.1   
 # 安装openvpn-dco
 ```bash
 apt install openvpn-dco-dkms
