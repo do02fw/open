@@ -10,8 +10,6 @@ sudo apt full-upgrade
 
 sudo reboot
 
-检查系统版本
-
 cat /etc/debian_version
 # 阿里云卸载监控
 以root用户登录云监控插件所在主机。
@@ -61,7 +59,7 @@ sudo apt autoremove -y && sudo apt autoclean && sudo reboot
 ```bash
 rm -rf /etc/apt/sources.list
 sudo sh -c 'echo "deb https://deb.debian.org/debian trixie main contrib" >> /etc/apt/sources.list' 
-sudo apt update && sudo apt full-upgrade -y  # 更新软件包列表并进行升级
+sudo apt update && sudo apt full-upgrade -y
 ```
 ```bash
 sudo apt autoremove -y && sudo apt autoclean && sudo reboot
