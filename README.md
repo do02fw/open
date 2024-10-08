@@ -157,29 +157,3 @@ local <IPv6地址>
 https://openvpn.net/client/client-connect-vpn-for-windows/
 
 https://www.apkmirror.com/apk/openvpn/openvpn-connect/
-# 编译哔哩哔哩
-https://github.com/BiliRoamingX/BiliRoamingX
-
-下载JDK并配置环境
-https://jdk.java.net/23/
-
-打开系统属性 -> 高级系统设置 -> 环境变量。
-
-在系统变量中，找到 Path 变量，点击编辑。
-
-在变量值末尾添加JDK的安装路径，例如：C:\Program Files\Java\jdk-11.0.16\bin
-
-新建一个系统变量，变量名为 JAVA_HOME，变量值为JDK的安装路径，例如：C:\Program Files\Java\jdk-11.0.16
-
-下载所需文件
-
-https://github.com/zjns/revanced-cli/releases/download/v4.6.0.1/revanced-cli.jar 
-
-https://github.com/BiliRoamingX/BiliRoamingX/actions/workflows/ci.yml
-
-https://dl.hdslb.com/mobile/latest/android64/iBiliPlayer-bili.apk
-
-cmd执行
-```bash
-java -jar revanced-cli.jar patch --merge BiliRoamingX-integrations.apk --patch-bundle BiliRoamingX-patches.jar --signing-levels 2,3 iBiliPlayer-bili.apk
-```
